@@ -9,6 +9,7 @@ const server = http.createServer((req, res) => {
     //验证域名
     if(config.host && req.headers.host!==config.host)return;
     let p = url.parse(req.url,true),server={};
+    //console.log(req.url);
     server.pathname = p.pathname;
     server.dir = __dirname+'/';
     server.fileDir = server.pathname.slice(0,server.pathname.search(/\/[^\/]*$/)+1);
