@@ -10,7 +10,7 @@ const template = require("./lib/template");
 module.exports = function(res,server){
     let rawOutStream='',output = m=>rawOutStream+=m;
     fs.stat(server.realPath, function (err, stats) {
-        if(err || server.pathname.search(/^[a-z0-9_\/\.]+$/i)===-1){
+        if(err || server.pathname.search(/^[a-z0-9-_\/\.]+$/i)===-1){
 			page[404](res,"the request "+server.pathname+" is not found");return;
         }else{
             if(stats.isDirectory()){
