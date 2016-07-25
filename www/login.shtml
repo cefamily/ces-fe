@@ -6,35 +6,77 @@
   <link rel="stylesheet" type="text/css" href="./css/login.css">
   <script type="text/javascript" src="./lib/jquery/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./lib/md5.js"></script>
+  <script type="text/javascript" src="./js/login.js"></script>
 </head>
 <body>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-md-offset-3"  id="main-box">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3"  id="main-box">
       <div id="login-box">
-        <form action="" method="POST" class="form-horizontal" role="form">
+        <form action="" method="POST" class="form-horizontal" role="form" id="login-panel">
           <div class="form-group">
             <legend>Civilization Extens Login</legend>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label">用户名:</label>
             <div class=" col-md-9">
-              <input type="text" class="form-control" placeholder="请输入用户名" />
+              <input type="text" class="form-control" placeholder="请输入用户名" id="l-username" />
             </div>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label">密码:</label>
             <div class=" col-md-9">
-              <input type="password" class="form-control" placeholder="请输入密码" />
+              <input type="password" class="form-control" placeholder="请输入密码"  id="l-password"/>
             </div>
           </div>
           <div class="form-group">
-            <div class=" col-md-2 col-md-offset-10">
-              <button type="button" class="btn btn-primary" >登录</button>
+            <div class="col-xs-4 col-md-2 col-md-offset-8">
+              <button type="button" class="btn btn-default" id="go-reg-btn">去注册</button>
+            </div>
+            <div class=" col-md-2 ">
+              <button type="button" class="btn btn-primary" id="login-btn">登录</button>
             </div>
           </div>
+          <legend></legend>
         </form>
-        <legend></legend>
+
+        <!--register-->
+
+        <form action="" method="POST" class="form-horizontal" role="form" id="reg-panel">
+          <div class="form-group">
+            <legend>Civilization Extens Register</legend>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">用户名:</label>
+            <div class=" col-md-9">
+              <input type="text" class="form-control" placeholder="请输入用户名" id="r-username" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">密码:</label>
+            <div class=" col-md-9">
+              <input type="password" class="form-control" placeholder="请输入密码"  id="r-password"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">确认密码:</label>
+            <div class=" col-md-9">
+              <input type="password" class="form-control" placeholder="请输入确认密码"  id="r-password2"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-xs-4 col-md-2 col-xs-offset-4 col-md-offset-8">
+              <button type="button" class="btn btn-default" id="go-login-btn" >返回登录</button>
+            </div>
+            <div class="col-xs-4 col-md-2">
+              <button type="button" class="btn btn-primary" id="reg-btn" >注册</button>
+            </div>
+          </div>
+          <legend></legend>
+        </form>
+
+
       </div>
     </div>
   </div>
