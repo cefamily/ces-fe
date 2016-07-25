@@ -12,15 +12,18 @@
 #login-box legend{
   color:#FFF;
 }
-#l-username,#l-password,#r-username,#r-password,#r-password2{
+#l-username,#l-password,#l-captcha,#r-username,#r-password,#r-password2,#r-captcha,#r-email{
   background:none;
   color:#FFF;
 }
 #l-username::-webkit-input-placeholder,
 #l-password::-webkit-input-placeholder,
+#l-captcha::-webkit-input-placeholder,
 #r-password::-webkit-input-placeholder,
 #r-password2::-webkit-input-placeholder,
-#r-username::-webkit-input-placeholder
+#r-username::-webkit-input-placeholder,
+#r-captcha::-webkit-input-placeholder,
+#r-email::-webkit-input-placeholder
 {
   color: #FFF;
 }

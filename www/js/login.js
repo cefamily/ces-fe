@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+  //初始化
+  $(".img-captcha").attr("src",window.host+"Home/Tool/captcha");
+
   //-----------页面切换--------------
   $('#go-reg-btn').click(function(){
     $("#login-panel").slideUp();
@@ -13,18 +16,57 @@ $(document).ready(function(){
 
   //---------事件处理------------
 
+  $(".img-captcha").click(function(){
+    $(".img-captcha").attr("src",window.host+"Home/Tool/captcha");
+  });
+
   $("#reg-btn").click(function(){
-    var pwd1=$("#r-password").val();
-    var pwd2=$("#r-password2").val();
-    var username=$("#r-username").val()
-    if(pwd1.trim()=="" || pwd2.trim()=="" || username.trim()==""){
+    var pwd1=$("#r-password").val().trim();
+    var pwd2=$("#r-password2").val().trim();
+    var username=$("#r-username").val().trim();
+    var email=$("#r-email").val().trim();
+    var captcha = $("#r-captcha").val();
+    if(pwd1=="" || pwd2=="" || username==""){
       alert("请填写完整信息");
       return null;
     }
-
+    if(pwd1!=pwd2) {
+      alert("两次密码不一致");
+      return null;
+    }
+    pwd1=CryptoJS.MD5(pwd1).toString();
+    $.ajax({
+      url: window.host + "Home/User/reg",
+      type: "POST",
+      dataType: "JSON",
+      data: {"name": username, "password": pwd1, "captcha": captcha,"email":email},
+      success: function (data) {
+        console.log(data);
+      },
+      error: function (e) {
+        console.log("ERROR!");
+        console.log(e);
+      }
+    });
   });
-  $("#login-btn").click(function(){
 
+  $("#login-btn").click(function() {
+    var pwd = $("#l-password").val();
+    var uname = $("#l-username").val();
+    var captcha = $("#l-captcha").val();
+    $.ajax({
+      url: window.host + "Home/User/userLogin",
+      type: "POST",
+      dataType: "JSON",
+      data: {"name": uname, "password": pwd, "captcha": captcha},
+      success: function (data) {
+        console.log(data);
+      },
+      error: function (e) {
+        console.log("ERROR!");
+        console.log(e);
+      }
+    });
   });
   //---------END-----------------
 });
