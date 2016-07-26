@@ -41,7 +41,17 @@ $(document).ready(function(){
       dataType: "JSON",
       data: {"name": username, "password": pwd1, "captcha": captcha,"email":email},
       success: function (data) {
-        console.log(data);
+        $(".img-captcha").click();
+        $("#r-captcha").val("");
+        if(data.status==0){
+          alert(data.info);
+          return null;
+        }else{
+          $("#go-login-btn").click();
+          alert("注册成功");
+          $(".img-captcha").click();
+          $("form input").val("");
+        }
       },
       error: function (e) {
         console.log("ERROR!");
@@ -54,13 +64,20 @@ $(document).ready(function(){
     var pwd = $("#l-password").val();
     var uname = $("#l-username").val();
     var captcha = $("#l-captcha").val();
+    pwd=CryptoJS.MD5(pwd).toString();
     $.ajax({
       url: window.host + "Home/User/userLogin",
       type: "POST",
       dataType: "JSON",
       data: {"name": uname, "password": pwd, "captcha": captcha},
       success: function (data) {
-        console.log(data);
+        if(data.status==0){
+          $(".img-captcha").click();
+            alert(data.info);
+            return null;
+        }else{
+          alert("登录成功");
+        }
       },
       error: function (e) {
         console.log("ERROR!");

@@ -1,1 +1,3 @@
-window.host="http://127.0.0.1/CES/";
+$.ajaxSettings.xhrFields={withCredentials: true};
+window.host="http://api.oniicyann.baka/CES/";
+//window.host="http://233hd.com/ces/index.php/";
