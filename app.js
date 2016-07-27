@@ -12,6 +12,7 @@ const server = http.createServer((req, res) => {
     //console.log(req.url);
     server.pathname = p.pathname;
     server.dir = __dirname+'/';
+    server.root = server.dir+'www/';
     server.fileDir = server.pathname.slice(0,server.pathname.search(/\/[^\/]*$/)+1);
     server.fileRealDir = __dirname+'/www'+server.fileDir;
     server.realPath = __dirname+'/www'+server.pathname;

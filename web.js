@@ -27,7 +27,7 @@ module.exports = function(res,server){
 				    let tempFileName = Date.now()+'_'+Math.random(),tempFilePath = server.dir+'temp/'+tempFileName;
                     let data = fs.readFileSync(server.realPath).toString();
                     let zdata = '';
-                    data = template.parse_subtemplate(data,server.fileRealDir);
+                    data = template.parse_subtemplate(data,server.root);
                     zdata += template.parse(data);
                     //console.log(zdata);
                     try{eval(zdata)}catch(e){
