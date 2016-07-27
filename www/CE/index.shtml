@@ -1,0 +1,83 @@
+<!--subtemplate ../$header -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3" id="col1">
+            <div class="row">
+              <div class="col-md-12 comic-box">
+                <div class="thumbnail">
+                  <a href="#">
+                    <img src="../img/1.jpg" class="img-panel"/>
+                  </a>
+                </div>
+                <div  class="caption text-center img-text-panel"  data-toggle="tooltip" title="(砲雷撃戦!よーい!二十五戦目) [めんてい処 (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)">(砲雷撃戦!よーい!二十五戦目) [めんてい処 (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)</div>
+                <div class="caption"><h4><span class="label label-success">图源</span>
+                  <span class="label label-info">修图</span>
+                  <span class="label label-warning">翻译</span>
+                  <span class="label label-danger">嵌字</span></h4></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 comic-box">
+                <div class="thumbnail">
+                  <a href="#">
+                    <img src="../img/index_back.jpg" class="img-panel"/>
+                  </a>
+                </div>
+                <div  class="caption text-center img-text-panel"  data-toggle="tooltip" title="(砲雷撃戦!よーい!二十五戦目) [めんてい処 (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)">(砲雷撃戦!よーい!二十五戦目) [めんてい処 (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)</div>
+                <div class="caption"><h4><span class="label label-success">图源</span>
+                  <span class="label label-info">修图</span>
+                  <span class="label label-warning">翻译</span>
+                  <span class="label label-danger">嵌字</span></h4></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3" id="col2">
+            <div class="row">
+              <div class="col-md-12 comic-box">
+                <div class="thumbnail">
+                  <a href="#">
+                    <img src="../img/index_back.jpg" class="img-panel"/>
+                  </a>
+                </div>
+                <div  class="caption text-center img-text-panel"  data-toggle="tooltip" title="(砲雷撃戦!よーい!二十五戦目) [めんてい処 (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)">(砲雷撃戦!よーい!二十五戦目) [めんてい処 (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)</div>
+                <div class="caption"><h4><span class="label label-success">图源</span>
+                  <span class="label label-info">修图</span>
+                  <span class="label label-warning">翻译</span>
+                  <span class="label label-danger">嵌字</span></h4></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 comic-box">
+                <div class="thumbnail">
+                  <a href="#">
+                    <img src="../img/1.jpg" class="img-panel"/>
+                  </a>
+                </div>
+                <div  class="caption text-center img-text-panel"  data-toggle="tooltip" title="(砲雷撃戦!よーい!二十五戦目) [めんてい処 (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)">(砲雷撃戦!よーい!二十五戦目) [めんてい処 (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)</div>
+                <div class="caption"><h4><span class="label label-success">图源</span>
+                  <span class="label label-info">修图</span>
+                  <span class="label label-warning">翻译</span>
+                  <span class="label label-danger">嵌字</span></h4></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3" id="col3">
+            <div class="row">
+              <div class="col-md-12 comic-box">
+                <div class="thumbnail">
+                  <a href="#">
+                    <img src="../img/1.jpg" class="img-panel"/>
+                  </a>
+                </div>
+                <div  class="caption text-center img-text-panel"  data-toggle="tooltip" title="(砲雷撃戦!よーい!二十五戦目) [めんてい処 (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)">(砲雷撃戦!よーい!二十五戦目) [めんてい処 (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)</div>
+                <div class="caption"><h4><span class="label label-success">图源</span>
+                  <span class="label label-info">修图</span>
+                  <span class="label label-warning">翻译</span>
+                  <span class="label label-danger">嵌字</span></h4></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--subtemplate ../$footer.shtml -->
