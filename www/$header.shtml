@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CE家族社</title>
   <link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/dashboard.css" />
@@ -29,7 +30,14 @@
       <a class="navbar-brand" href="#">Civilization Extend</a>
     </div>
     <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right visible-md visible-lg" >
+        <li><a href="#">欢迎!</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right visible-xs visible-sm">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">发起翻译项目</a></li>
+        <li><a href="#">我发起的项目</a></li>
+        <li><a href="#">个人中心</a></li>
         <li><a href="#">欢迎!</a></li>
       </ul>
 

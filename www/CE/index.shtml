@@ -3,7 +3,7 @@
 <script type="text/javascript" src="../js/home-index.js"></script>
 <div class="container">
   <div class="row">
-    <div class="col-md-3" id="col1">
+    <div class="col-md-3 col-xs-12 col-sm-4" id="col1">
 
       <!--row start-->
       <div class="row">
@@ -62,7 +62,7 @@
       <!--row end-->
 
     </div>
-    <div class="col-md-3" id="col2">
+    <div class="col-md-3 col-xs-12 col-sm-4 " id="col2">
       <!--row start-->
       <div class="row">
         <div class="col-md-12 comic-box">
@@ -91,9 +91,9 @@
       </div>
       <!--row end-->
     </div>
-    <div class="col-md-3" id="col3">
+    <div class="col-md-3 col-xs-12 col-sm-4 " id="col3">
 
     </div>
   </div>
 </div>
-<!--subtemplate $footer.shtml -->
+<!--subtemplate $footer -->
