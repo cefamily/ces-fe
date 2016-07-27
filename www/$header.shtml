@@ -7,12 +7,12 @@
   <link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/dashboard.css" />
   <link rel="stylesheet" href="/css/header.css" />
-  <link rel="stylesheet" href="/css/home-index.css" />
+  <!-- <link rel="stylesheet" href="/css/home-index.css" /> -->
   <script type="text/javascript" src="/lib/jquery/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="/lib/bootstrap/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="/lib/md5.js"></script>
   <script type="text/javascript" src="/js/Common.js"></script>
-  <script type="text/javascript" src="/js/home-index.js"></script>
+<!--   <script type="text/javascript" src="/js/home-index.js"></script> -->
 </head>
 
 <body>
@@ -42,8 +42,9 @@
     <div class="col-sm-3 col-md-2 sidebar">
       <ul class="nav nav-sidebar">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">发布本子</a></li>
-        <li><a href="#"></a></li>
+        <li><a href="#">发起翻译项目</a></li>
+        <li><a href="#">我发起的项目</a></li>
+        <li><a hreaf="#">个人资料</a></li>
       </ul>
     </div>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

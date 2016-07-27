@@ -1,11 +1,35 @@
 .comic-box{
   background-color: rgba(255,255,255,0.8);
   border-radius: 5px;
-
   margin: 10px;
-  padding: 10px;
+  padding: 0px;
 }
 #col1,#col2,#col3{
   margin-left: 10px;
   margin-right: 10px;
+}
+.thumbnail{
+  padding:0px;
+  margin-bottom: 0;
+}
+.img-text-panel{
+  padding:10px;
+}
+.conpa{
+  background-image:url(../img/juxing-16.png);
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+.conpa > div{
+  width: 50px;
+  height: 50px;
+  transform: rotate(-45deg);
+  color: #fd7c9a;
+  text-align: center;
+  font-family: "微软雅黑";
+}
+.label-box{
+  padding: 10px;
 }
