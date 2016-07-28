@@ -83,7 +83,7 @@
           </div>
           <div class="label-box">
             <span class="label label-success">已完成</span>
-            <span class="label label-danger">网源</span>
+            <span class="label label-warning">网源</span>
             <span class="label label-success">公开</span>
             <span class="label label-warning"><span class="glyphicon glyphicon-star"></span> 32</span>
           </div>
@@ -97,3 +97,37 @@
   </div>
 </div>
 <!--subtemplate $footer -->
+
+<div class="bigbox">
+  <div class="simbox">
+    <ul>
+      <li class="item"></li>
+      <li class="item"></li>
+      <li class="item"></li>
+      <li class="item"></li>
+      <li class="item"></li>
+    </ul>
+  </div>
+</div>
+<div class="bigbox">
+  <div class="simbox">
+    <ul>
+      <li class="item"></li>
+      <li class="item"></li>
+      <li class="item"></li>
+      <li class="item"></li>
+      <li class="item"></li>
+    </ul>
+  </div>
+</div>
+<div class="bigbox">
+  <div class="simbox">
+    <ul>
+      <li class="item"></li>
+      <li class="item"></li>
+      <li class="item"></li>
+      <li class="item"></li>
+      <li class="item"></li>
+    </ul>
+  </div>
+</div>

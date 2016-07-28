@@ -1,0 +1,87 @@
+<!--subtemplate $header -->
+<link rel="stylesheet" href="../css/home-post.css" />
+<script type="text/javascript" src="../js/home-post.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" id="main-panel">
+            <legend>
+                <h3>发布本子</h3></legend>
+            <form action="" method="POST" class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">本子名称：</label>
+                    <div class="col-md-6">
+                        <input class="form-control" type="text" id="bname" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">图源类型：</label>
+                    <div class="col-md-6">
+                        <select class="form-control" id="imgtype">
+                            <option value="0">网源</option>
+                            <option value="1">自扫</option>
+                            <option value="3">招图源~</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">封面网址：</label>
+                    <div class="col-md-6">
+                        <input class="form-control" type="text" id="iurl" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">备注：</label>
+                    <div class="col-md-6">
+                        <textarea class="form-control" rows="3" id="remark"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">认领职位：</label>
+                    <div class="col-md-6">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="xt" value="option1"> 修图
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="fy" value="option2"> 翻译
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="qz" value="option3"> 嵌字
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="ty" value="option4" disabled="disabled" checked="checked"> 图源
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">是否公开：</label>
+                    <div class="col-md-6">
+                        <label>
+                            <input type="radio" name="public" id="input1"  value="" checked="checked"> 是
+                        </label>
+                        <label>
+                            <input type="radio" name="public" id="input2" value=""> 否
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group" id="group-panel">
+                    <label class="col-sm-2 control-label">选择组：</label>
+                    <div class="col-md-6">
+                        <label>
+                            <input type="checkbox" value=""> 组1
+                        </label>
+                        <label>
+                            <input type="checkbox" value=""> 组2
+                        </label>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-10 col-sm-offset-2">
+                        <button type="button" class="btn btn-primary">发布（＞ω＜）</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--subtemplate $footerl -->

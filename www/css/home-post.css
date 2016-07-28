@@ -1,0 +1,9 @@
+#main-panel{
+  background-color: #FFF;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#group-panel{
+	display: none;
+}
