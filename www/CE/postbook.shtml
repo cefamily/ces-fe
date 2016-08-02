@@ -19,7 +19,7 @@
                         <select class="form-control" id="imgtype">
                             <option value="0">网源</option>
                             <option value="1">自扫</option>
-                            <option value="3">招图源~</option>
+                            <option value="2">招图源~</option>
                         </select>
                     </div>
                 </div>
