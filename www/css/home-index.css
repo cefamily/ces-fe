@@ -33,3 +33,6 @@
 .label-box{
   padding: 10px;
 }
+.label-box > .label{
+  margin-right: 5px;
+}

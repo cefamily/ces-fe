@@ -1,9 +1,13 @@
 #main-panel{
-  background-color: #FFF;
   border-radius: 10px;
   padding: 20px;
+  background-color: #333;
+  color: #FFF;
 }
 
 #group-panel{
 	display: none;
+}
+legend{
+	color: #FFF;
 }

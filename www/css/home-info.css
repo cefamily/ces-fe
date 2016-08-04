@@ -1,0 +1,39 @@
+#main {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    color: #FFF;
+}
+
+legend {
+    color: #FFF;
+}
+
+#img-box> img {
+    max-height: 250px;
+    margin: 12px auto;
+}
+
+#img-box {
+    border-color: #FFF;
+    border-width: 1px;
+    border-style: dashed;
+}
+.row{
+	margin-bottom: 20px;
+}
+#accordion div{
+    background-color: #4B4B4B;
+}
+#accordion .panel-default{
+    border-color:#656565;
+}
+#accordion .panel-default .panel-body{
+    border-top-color:#656565;
+}
+.panel-title{
+    color: #FFF;
+}
+blockquote{
+        background-color: #333333;
+}

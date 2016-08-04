@@ -1,0 +1,11 @@
+<!--subtemplate $header -->
+<link rel="stylesheet" href="../css/home-center.css" />
+<script type="text/javascript" src="../js/home-center.js"></script>
+<div class="container">
+    <div class="row">
+    	<div class="col-md-12" id="main-box">
+			<legend>个人中心</legend>
+    	</div>
+    </div>
+</div>
+<!--subtemplate $footer -->
