@@ -4,6 +4,7 @@
         constructor(x){this.list = [];if(typeof x == 'function')this.add(x)}
         add(x){if(this.list)this.list.push(x);return this}
         run(y){if(this.list && this.list.length!=0)this.list.shift()(this,y);return this}
+        clean(){this.list=[];return this}
         get noConflict(){window.SYNC = z;return w}
     };
     window.SYNC = w;
