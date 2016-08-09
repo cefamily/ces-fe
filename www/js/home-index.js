@@ -75,7 +75,7 @@ function flushinfo(data,m){
         </div>
       </div>`);
 	  m.addClass('img-panel');
-	  lr.find('.conpa').append(m);
+	  lr.find('.conpa').after(m);
 	  lr.appendTo('cache-mission-block');
 	  lr.appendTo('#col1');
 	  
