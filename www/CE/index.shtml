@@ -1,7 +1,8 @@
 <!--subtemplate $header -->
 <link rel="stylesheet" href="../css/home-index.css"/>
-<!--script type="text/javascript" src="../js/home-index.js"></script-->
+<script type="text/javascript" src="../js/home-index.js"></script>
 
+  <div class="cache-mission-block dn"></div>
   <div class="row indexList">
     <div class="col-lg-4 col-xs-12 col-sm-6" id="col1">
 
