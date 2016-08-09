@@ -5,7 +5,7 @@
 
   <div class="cache-mission-block dn"></div>
   <div class="row indexList">
-    <div class="col-lg-4 col-xs-12 col-sm-6" id="col1">
+    <div class="col-md-4 col-xs-12 col-sm-6" id="col1">
 
       <!--row start-->
       <div class="mission-block">
@@ -64,7 +64,7 @@
       <!--row end-->
 
     </div>
-    <div class="col-lg-4 col-xs-12 col-sm-6 " id="col2">
+    <div class="col-md-4 hidden-xs col-sm-6 " id="col2">
       <!--row start-->
       <div class="mission-block">
         <div class="col-md-12 comic-box">
@@ -94,7 +94,7 @@
       <!--row end-->
     </div>
     
-    <div class="col-lg-4 col-xs-12 col-sm-6 " id="col3">
+    <div class="col-md-4 hidden-xs hidden-sm" id="col3">
       <!--row start-->
       <div class="mission-block">
         <div class="col-md-12 comic-box">

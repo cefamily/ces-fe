@@ -15,13 +15,19 @@ $(function () {
 		if(!window.loadPic){
 			console.error('NOT LOADED STRAIGHT.JS');return;
 		}
-		let p = data.info.products,imgs=[];
+		let p = data.info.products,imgs=[],box=[0,0,0];
+		$('#col1,#col2,#col3').empty();
+		if($('#col2').css('display')=='none'){
+			box=[0]
+		}else if($('#col3').css('display')=='none'){
+			box=[0,0]
+		}
 		for(let d in p){
 			imgs.push(
 				{
 					src:p[d].pimg,
 					callback:function(m){
-						flushinfo(p[d],$(m))
+						flushinfo(p[d],$(m),box)
 					}
 				}
 			)
@@ -39,7 +45,7 @@ $(function () {
 
 });
 
-function flushinfo(data,m){
+function flushinfo(data,m,box){
 	//console.log(index);
 	let month=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],d= new Date(data.pctime),status=[
 		"<span class=\"label label-danger\">征集中</span>",
@@ -77,7 +83,37 @@ function flushinfo(data,m){
 	  m.addClass('img-panel');
 	  lr.find('.conpa').after(m);
 	  lr.appendTo('cache-mission-block');
-	  lr.appendTo('#col1');
+		if(box.length==1){
+			box[0] += lr.height();
+			lr.appendTo('#col1');
+		}else if(box.length==2){
+			if(box[0]<box[1]){
+				box[0] += lr.height();
+				lr.appendTo('#col1');
+			}else{
+				box[1] += lr.height();
+				lr.appendTo('#col2');
+			}
+		}else if(box.length==3){
+			if(box[0]<box[1]){
+				if(box[0]<box[2]){
+					box[0] += lr.height();
+					lr.appendTo('#col1');
+				}else{
+					box[2] += lr.height();
+					lr.appendTo('#col3');
+				}
+			}else{
+				if(box[1]<box[2]){
+					box[1] += lr.height();
+					lr.appendTo('#col2');
+				}else{
+					box[2] += lr.height();
+					lr.appendTo('#col3');
+				}
+			}
+		}
+	  
 	  
 
 }
