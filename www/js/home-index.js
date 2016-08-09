@@ -35,11 +35,13 @@ $(function () {
 			loadPic(imgs);
 			$(window).unbind('resize').bind('resize',function(){
 				let box2 = [0,0,0];
-				if($('#col2').css('display')=='none')box=[0];
-				else if($('#col3').css('display')=='none')box=[0,0];
+				if($('#col2').css('display')=='none')box2=[0];
+				else if($('#col3').css('display')=='none')box2=[0,0];
 				if(box2.length!=box.length){
-					if(ki)ki.clean();
 					box = box2;
+					if(ki)ki.clean();
+					$('#col1,#col2,#col3').empty();
+					
 					loadPic(imgs);
 				}
 			});
@@ -92,36 +94,43 @@ function flushinfo(data,m,box){
 	  lr.find('.conpa').after(m);
 	  lr.appendTo('cache-mission-block');
 		if(box.length==1){
-			box[0] += lr.height();
 			lr.appendTo('#col1');
+			box[0] += lr.height();
+			
 		}else if(box.length==2){
-			if(box[0]<box[1]){
-				box[0] += lr.height();
+			if(box[0]<=box[1]){
 				lr.appendTo('#col1');
+				box[0] += lr.height();
+				
 			}else{
-				box[1] += lr.height();
 				lr.appendTo('#col2');
+				box[1] += lr.height();
+				
 			}
 		}else if(box.length==3){
-			if(box[0]<box[1]){
-				if(box[0]<box[2]){
-					box[0] += lr.height();
+			if(box[0]<=box[1]){
+				if(box[0]<=box[2]){
 					lr.appendTo('#col1');
+					box[0] += lr.height();
+					
 				}else{
-					box[2] += lr.height();
 					lr.appendTo('#col3');
+					box[2] += lr.height();
+					
 				}
 			}else{
-				if(box[1]<box[2]){
-					box[1] += lr.height();
+				if(box[1]<=box[2]){
 					lr.appendTo('#col2');
+					box[1] += lr.height();
+					
 				}else{
-					box[2] += lr.height();
 					lr.appendTo('#col3');
+					box[2] += lr.height();
 				}
 			}
 		}
-	  
+	  console.log(box,lr.height());
+		window.zzz=lr;
 	  
 
 }
