@@ -129,8 +129,8 @@ function flushinfo(data,m,box){
 				}
 			}
 		}
-	  console.log(box,lr.height());
-		window.zzz=lr;
+	  // console.log(box,lr.height());
+		// window.zzz=lr;
 	  
 
 }
