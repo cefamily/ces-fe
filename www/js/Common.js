@@ -5,10 +5,10 @@
     //window.host="http://233hd.com/ces/index.php/";
 
     let z = location.search.split('-');
-    window.get = {};
+    window.GET = {};
     if(z.length>1){
         z[0] = z[0].slice(1);
-        let g = window.get;
+        let g = window.GET;
         for(let d in z){
             if(d%2)continue;
             if(z[d]){
