@@ -2,7 +2,36 @@
 	background-color: #333;
 	border-radius: 10px;
 	padding: 20px;
+	color: #FFF;
 }
 legend{
 	color: #FFF;
+}
+legend>div{
+	float: left;
+}
+.nav-tabs{
+	    border-bottom:none;
+}
+.nav-tabs>li>a{
+	color:#FFF;
+}
+.nav-tabs>li>a:hover{
+	color:#3A3A3A;
+}
+#header{
+	max-width: 100%;
+}
+#headbox{
+	max-height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+#headbox>div{
+    position: absolute;
+    top: 170px;
+    width: 100%;
+    background-color: rgba(1,1,1,0.7);
+    height: 30px;
+    line-height: 30px;
 }
