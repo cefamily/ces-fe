@@ -45,24 +45,8 @@
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse in">
                         <div class="panel-body">
-                        <!--提交区域-->
-                            <div class="well" style="overflow:auto;">
-                                <form action="" method="POST" role="form">
-                                    <div class="col-md-8">
-                                        <label class="sr-only" for="">进度信息</label>
-                                        <input type="text" class="form-control" id="" placeholder="请填写进度信息">
-                                    </div>
-                                    <div class="col-md-2">
-                                        <input type="checkbox" value="">
-                                        <label> 已经完成该任务</label>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <button type="button" class="btn btn-primary">提交进度</button>
-                                    </div>
-                                </form>
-                            </div>
                              <!--进度区域-->
-                            <div>                               
+                            <div id="typro">                               
                                 <blockquote class="blockqute-danger">
                                     <p>Admin汇报了进度：已获得图源</p>
                                     <footer>2016年8月4日16:45:15</footer>
@@ -85,23 +69,9 @@
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse">
                         <div class="panel-body">
-                           <div class="well" style="overflow:auto;">
-                                <form action="" method="POST" role="form">
-                                    <div class="col-md-8">
-                                        <label class="sr-only" for="">进度信息</label>
-                                        <input type="text" class="form-control" id="" placeholder="请填写进度信息">
-                                    </div>
-                                    <div class="col-md-2">
-                                        <input type="checkbox" value="">
-                                        <label> 已经完成该任务</label>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <button type="button" class="btn btn-primary">提交进度</button>
-                                    </div>
-                                </form>
-                            </div>
+                        
                             <!--进度区域-->
-                            <div>  </div>
+                            <div id="xtpro">  </div>
                         </div>
                     </div>
                 </div>
@@ -115,23 +85,9 @@
                     </div>
                     <div id="collapseThree" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <div class="well" style="overflow:auto;">
-                                <form action="" method="POST" role="form">
-                                    <div class="col-md-8">
-                                        <label class="sr-only" for="">进度信息</label>
-                                        <input type="text" class="form-control" id="" placeholder="请填写进度信息">
-                                    </div>
-                                    <div class="col-md-2">
-                                        <input type="checkbox" value="">
-                                        <label> 已经完成该任务</label>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <button type="button" class="btn btn-primary">提交进度</button>
-                                    </div>
-                                </form>
-                            </div>
+                        
                             <!--进度区域-->
-                            <div>  </div>
+                            <div id="fypro">  </div>
                         </div>
                     </div>
                 </div>
@@ -145,23 +101,9 @@
                     </div>
                     <div id="collapseFour" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <div class="well" style="overflow:auto;">
-                                <form action="" method="POST" role="form">
-                                    <div class="col-md-8">
-                                        <label class="sr-only" for="">进度信息</label>
-                                        <input type="text" class="form-control" id="" placeholder="请填写进度信息">
-                                    </div>
-                                    <div class="col-md-2">
-                                        <input type="checkbox" value="">
-                                        <label> 已经完成该任务</label>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <button type="button" class="btn btn-primary">提交进度</button>
-                                    </div>
-                                </form>
-                            </div>
+                        
                             <!--进度区域-->
-                            <div>  </div>
+                            <div id="qzpro">  </div>
                         </div>
                     </div>
                 </div>
@@ -169,4 +111,5 @@
         </div>
     </div>
 </div>
+
 <!--subtemplate $footer -->
