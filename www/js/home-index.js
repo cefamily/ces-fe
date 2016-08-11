@@ -149,7 +149,7 @@ $(function () {
 		}
 	});
 	let ee = function(){
-		if(llt)if($('body').height()-document.documentElement.scrollTop-$(window).height()<$('.thumbnail img.img-panel').eq(imgss.length-1).height()+200)ou(++page);
+		if(llt)if((document.documentElement.offsetHeight || $('body').height())-(document.documentElement.scrollTop || $('body').scrollTop())-$(window).height()<$('.thumbnail img.img-panel').eq(imgss.length-1).height()+200)ou(++page);
 		
 	}
 	$(window).bind('scroll',ee);
