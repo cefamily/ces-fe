@@ -1,7 +1,7 @@
 $(function () {
 	function flushinfo(data,m,box){
 		//console.log(index);
-		let month=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],d= new Date(data.pctime),status=[
+		let month=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],d= new Date(parseInt(data.pctime)),status=[
 			"<span class=\"label label-danger\">征集中</span>",
 			"<span class=\"label label-info\">进行中</span>",
 			"<span class=\"label label-success\">已完成</span>"
@@ -15,7 +15,7 @@ $(function () {
 		],lr = $(`<div class="mission-block">
 					<div class="col-md-12 comic-box">
 						<div class="thumbnail">
-							<a href="#">
+							<a href="/CE/bookinfo.shtml?id-${data.pid}">
 								<div class="conpa">
 									<div>
 										<span style="font-size:20px;">${d.getDate()}</span><br>

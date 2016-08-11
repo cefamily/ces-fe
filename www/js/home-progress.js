@@ -43,6 +43,7 @@ $(function() {
                     <dd>${info.pup}</dd>
 					`);
                 $("#img-box>img").attr("src",info.pimg);
+                $("legend").html(info.pname);
             } else {
                 $("#main").html("<h1>没有这个ID的数据哦~</h1>");
             }
