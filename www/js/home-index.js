@@ -127,7 +127,7 @@ $(function () {
 					)
 				}
 				loadPic(imgs,()=>{
-					llt = 1;console.log(1);
+					llt = 1;
 				});
 				
 			},
