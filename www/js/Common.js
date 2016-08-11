@@ -2,7 +2,8 @@
 (()=>{
     $.ajaxSettings.xhrFields={withCredentials: true};
     //window.host="http://api.oniicyann.baka/CES/";
-    window.host="http://233hd.com/ces/";
+    //window.host="http://233hd.com/ces/";
+    window.host="http://c.baka/index.php/";
 
     let z = location.search.split('-');
     window.GET = {};

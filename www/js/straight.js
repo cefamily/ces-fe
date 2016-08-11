@@ -11,8 +11,8 @@
     window.loadPic = function(src,callback,inner){
         if(typeof src != 'object'){
             if(typeof src != 'string'){console.error('参数错误');return}
-            src=[{src:src,callback:callback}]
-        }else inner = callback;
+            src=[{src:src,callback:callback}];callback=null;
+        }
         let k = new SYNC,n=0,error=e=>console.error('图片加载失败');
         for(let d in src){
             let s = src[d];
@@ -21,8 +21,8 @@
                 let img=new Image();img.addEventListener('error',error);img.addEventListener('load',e=>{
                     if(s.callback && typeof s.callback == 'function')s.callback(img,k);if(!inner)k.run()
                 });img.src = s.src
-            })
-        }k.run();return n
+            });
+        }if(callback)k.add(callback);k.run();return n
     }
 }()
 
