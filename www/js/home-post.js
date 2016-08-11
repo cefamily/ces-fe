@@ -40,7 +40,7 @@ $(document).ready(function() {
 
     // --------------图源类型------------
     $("#imgtype").change(function(event) {
-        if ($(this).val() == 3) {
+        if ($(this).val() == 2) {
 
             $("#ty").prop("checked", false);
         } else {
