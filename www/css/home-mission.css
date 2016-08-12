@@ -14,6 +14,10 @@
 .mission-info{
     color:white;text-align:right;padding:10px 30px;
 }
+.mission-info-z{margin-bottom:15px;}
+.mission-info-z span{
+    margin:2px;
+}
 .mission-action{
     position:absolute;
     bottom:30px;right:30px;
