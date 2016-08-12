@@ -1,6 +1,9 @@
 $(document).ready(function(){
 
   //初始化
+  $.getJSON(window.host+'Home/User/getMyInfo',function(d){
+    if(d.status)location="/CE/index.shtml"
+  });
   $(".img-captcha").attr("src",window.host+"Home/Tool/captcha");
 
   //-----------页面切换--------------
@@ -76,7 +79,7 @@ $(document).ready(function(){
             alert(data.info);
             return null;
         }else{
-          alert("登录成功");
+          alert("登录成功");location.reload(true);
         }
       },
       error: function (e) {

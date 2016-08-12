@@ -39,7 +39,7 @@ $(function() {
                     <dd>${pubstat[info.pteam]}</dd>
                     <dt>点击数:</dt>
                     <dd>${info.pclick}</dd>
-                    <dt>UP数</dt>
+                    <dt>UP数:</dt>
                     <dd>${info.pup}</dd>
 					`);
                 $("#img-box>img").attr("src",info.pimg);

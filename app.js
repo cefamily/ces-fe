@@ -5,11 +5,30 @@ const url = require('url');
 const querystring = require('querystring');
 const web = require('./web');
 const config = require('./config');
+const rewrite = require('./lib/rewrite');
 const server = http.createServer((req, res) => {
     //验证域名
     if(config.host && req.headers.host!==config.host)return;
-    let p = url.parse(req.url,true),server={};
-    //console.log(req.url);
+    let trueUrl = req.url;
+    console.log(req.url);
+    for(let d in rewrite){
+        let trueUrl2 = trueUrl.replace(rewrite[d].in,rewrite[d].out);
+        if((trueUrl2 != trueUrl) && rewrite[d].plus){
+            let plus = rewrite[d].plus.split(',');
+            if(plus.indexOf('R')!=-1){
+                res.setHeader('Location',rewrite[d].out);
+                res.writeHead(301,"Moved Permanently");
+                res.end();return;
+            }
+            if(plus.indexOf('L')!=-1){
+                break;
+            }
+        }
+        trueUrl = trueUrl2;
+        
+    }
+    let p = url.parse(trueUrl,true),server={};
+    
     server.pathname = p.pathname;
     server.dir = __dirname+'/';
     server.root = server.dir+'www/';
