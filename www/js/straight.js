@@ -13,14 +13,14 @@
             if(typeof src != 'string'){console.error('参数错误');return}
             src=[{src:src,callback:callback}];callback=null;
         }
-        let k = new SYNC,n=0,error=e=>{
-            console.error('图片加载失败');;if(!inner)k.run()
-        }
+        let k = new SYNC,n=0;
         for(let d in src){
             let s = src[d];
             if(typeof s!='object' || !s.src){console.warn('IMG OBJECT , TYPE ERROR');continue;}n++;
             k.add(()=>{
-                let img=new Image();img.addEventListener('error',error);img.addEventListener('load',e=>{
+                let img=new Image();img.addEventListener('error',e=>{
+                    console.error('图片加载失败');img.er = 1;s.callback(img,k);if(!inner)k.run()
+                });img.addEventListener('load',e=>{
                     if(s.callback && typeof s.callback == 'function')s.callback(img,k);if(!inner)k.run()
                 });img.src = s.src
             });

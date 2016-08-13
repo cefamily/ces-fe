@@ -37,6 +37,8 @@ $(function(){
                 </div>
             </div>`);
 		lr.appendTo('.missionList');
+		if(!m[0].er)
+			lr.find('.mission-block-in').css({'background-image':'linear-gradient(to right,rgba(255, 255, 255, 0) 0%,rgba(51,51,51,0.9) 20%,rgba(51,51,51,1) 30%,rgba(51,51,51,1) 100%),url('+data.pimg+')'});
 	}
 
 	let page=1,llt=0;
