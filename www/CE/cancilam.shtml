@@ -1,0 +1,156 @@
+<!--subtemplate $header -->
+<link rel="stylesheet" href="../css/home-index.css"/>
+<script type="text/javascript" src="/js/straight.js"></script>
+<script type="text/javascript" src="/js/home-can.js"></script>
+
+  <div class="cache-mission-block dn"></div>
+  <div class="row indexList">
+    <div class="col-md-4 col-xs-12 col-sm-6" id="col1">
+
+      <!--row start-->
+      <div class="mission-block">
+        <div class="col-md-12 comic-box">
+          <div class="thumbnail">
+            <a href="#">
+            <div class="conpa">
+              <div>
+                <span style="font-size:20px;">11</span><br>
+                七月
+              </div>
+            </div>
+              <img src="../img/login_back.jpg" class="img-panel"/>
+            </a>
+          </div>
+          <div class="caption img-text-panel" data-toggle="tooltip"
+               title="(砲雷撃戦!よーい!二十五戦目) [めんてい処 (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)">(砲雷撃戦!よーい!二十五戦目) [めんてい処
+            (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)
+          </div>
+          <div class="label-box">
+            <span class="label label-danger">征集中</span>
+            <span class="label label-warning">网源</span>
+            <span class="label label-danger">限制组</span>
+            <span class="label label-warning"><span class="glyphicon glyphicon-star"></span> 12</span>
+          </div>
+        </div>
+      </div>
+      <!--row end-->
+
+      <!--row start-->
+      <div class="mission-block">
+        <div class="col-md-12 comic-box">
+          <div class="thumbnail">
+            <a href="#">
+              <div class="conpa">
+                <div>
+                  <span style="font-size:20px;">11</span><br>
+                  七月
+                </div>
+              </div>
+              <img src="../img/1.jpg" class="img-panel"/>
+            </a>
+          </div>
+          <div class="caption img-text-panel" data-toggle="tooltip"
+               title="(砲雷撃戦!よーい!二十五戦目) [めんてい処 (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)">(砲雷撃戦!よーい!二十五戦目) [めんてい処
+            (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)
+          </div>
+          <div class="label-box">
+            <span class="label label-info">进行中</span>
+            <span class="label label-info">自扫</span>
+            <span class="label label-success">公开</span>
+            <span class="label label-warning"><span class="glyphicon glyphicon-star"></span> 12</span>
+          </div>
+        </div>
+        </div>
+      <!--row end-->
+
+    </div>
+    <div class="col-md-4 hidden-xs col-sm-6 " id="col2">
+      <!--row start-->
+      <div class="mission-block">
+        <div class="col-md-12 comic-box">
+          <div class="thumbnail">
+            <a href="#">
+              <div class="conpa">
+                <div>
+                  <span style="font-size:20px;">22</span><br>
+                  七月
+                </div>
+              </div>
+              <img src="../img/1.jpg" class="img-panel"/>
+            </a>
+          </div>
+          <div class="caption img-text-panel" data-toggle="tooltip"
+               title="(砲雷撃戦!よーい!二十五戦目) [めんてい処 (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)">(砲雷撃戦!よーい!二十五戦目) [めんてい処
+            (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)
+          </div>
+          <div class="label-box">
+            <span class="label label-success">已完成</span>
+            <span class="label label-warning">网源</span>
+            <span class="label label-success">公开</span>
+            <span class="label label-warning"><span class="glyphicon glyphicon-star"></span> 32</span>
+          </div>
+        </div>
+      </div>
+      <!--row end-->
+    </div>
+    
+    <div class="col-md-4 hidden-xs hidden-sm" id="col3">
+      <!--row start-->
+      <div class="mission-block">
+        <div class="col-md-12 comic-box">
+          <div class="thumbnail">
+            <a href="#">
+            <div class="conpa">
+              <div>
+                <span style="font-size:20px;">11</span><br>
+                七月
+              </div>
+            </div>
+              <img src="../img/login_back.jpg" class="img-panel"/>
+            </a>
+          </div>
+          <div class="caption img-text-panel" data-toggle="tooltip"
+               title="(砲雷撃戦!よーい!二十五戦目) [めんてい処 (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)">(砲雷撃戦!よーい!二十五戦目) [めんてい処
+            (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)
+          </div>
+          <div class="label-box">
+            <span class="label label-danger">征集中</span>
+            <span class="label label-warning">网源</span>
+            <span class="label label-danger">限制组</span>
+            <span class="label label-warning"><span class="glyphicon glyphicon-star"></span> 12</span>
+          </div>
+        </div>
+      </div>
+      <!--row end-->
+
+      <!--row start-->
+      <div class="mission-block">
+        <div class="col-md-12 comic-box">
+          <div class="thumbnail">
+            <a href="#">
+              <div class="conpa">
+                <div>
+                  <span style="font-size:20px;">11</span><br>
+                  七月
+                </div>
+              </div>
+              <img src="../img/1.jpg" class="img-panel"/>
+            </a>
+          </div>
+          <div class="caption img-text-panel" data-toggle="tooltip"
+               title="(砲雷撃戦!よーい!二十五戦目) [めんてい処 (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)">(砲雷撃戦!よーい!二十五戦目) [めんてい処
+            (めんていやくな)] 響の恋は響き響いて響きあって (艦隊これくしょん -艦これ-)
+          </div>
+          <div class="label-box">
+            <span class="label label-info">进行中</span>
+            <span class="label label-info">自扫</span>
+            <span class="label label-success">公开</span>
+            <span class="label label-warning"><span class="glyphicon glyphicon-star"></span> 12</span>
+          </div>
+        </div>
+        </div>
+      <!--row end-->
+    </div>
+  </div>
+
+<!--subtemplate $footer -->
