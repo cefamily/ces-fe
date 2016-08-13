@@ -13,7 +13,9 @@
             if(typeof src != 'string'){console.error('参数错误');return}
             src=[{src:src,callback:callback}];callback=null;
         }
-        let k = new SYNC,n=0,error=e=>console.error('图片加载失败');
+        let k = new SYNC,n=0,error=e=>{
+            console.error('图片加载失败');;if(!inner)k.run()
+        }
         for(let d in src){
             let s = src[d];
             if(typeof s!='object' || !s.src){console.warn('IMG OBJECT , TYPE ERROR');continue;}n++;
