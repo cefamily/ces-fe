@@ -88,6 +88,7 @@ $(function () {
 		llt = 0;
 		let imgs = [];
 		$.ajax({
+			url:window.host+"Home/Product/getMyCanClaimProduct",
 			type:"POST",
 			dataType:"JSON",
 			data:{page:p},
