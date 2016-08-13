@@ -34,8 +34,9 @@
       </ul>
       <ul class="nav navbar-nav navbar-right visible-xs visible-sm">
         <li><a href="/CE/index.shtml">Home</a></li>
+        <li><a href="#">可认领的项目</a></li>
         <li><a href="/CE/postbook.shtml">发起翻译项目</a></li>
-        <li><a href="#">发起的项目</a></li>
+        <li><a href="/CE/my_post.shtml">发起的项目</a></li>
         <li><a href="/CE/my_mission.shtml">认领的项目</a></li>
         <li><a href="/CE/peocenter.shtml">个人中心</a></li>
         <li><a href="#">欢迎!</a></li>
@@ -50,8 +51,9 @@
     <div class="col-sm-3 col-md-2 sidebar">
       <ul class="nav nav-sidebar">
         <li class="active"><a href="/CE/index.shtml">Home</a></li>
+        <li><a href="#">可认领的项目</a></li>
         <li><a href="/CE/postbook.shtml">发起翻译项目</a></li>
-        <li><a href="#">发起的项目</a></li>
+        <li><a href="/CE/my_post.shtml">发起的项目</a></li>
         <li><a href="/CE/my_mission.shtml">认领的项目</a></li>
         <li><a href="/CE/peocenter.shtml">个人资料</a></li>
       </ul>

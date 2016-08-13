@@ -1,0 +1,29 @@
+<!--subtemplate $header -->
+<link rel="stylesheet" href="/css/home-mission.css"/>
+<script type="text/javascript" src="/js/straight.js"></script>
+<script type="text/javascript" src="/js/home-mypost.js"></script>
+<div class="row missionList">
+	
+    <div class="mission-block col-lg-6 col-sm-12">
+        <div class="mission-block-in">
+            <div class="mission-info">
+                <h4>自动认领测试1</h4>
+                <div class="label-box mission-info-z">
+					<span class="label label-danger">征集中</span>
+                    <span class="label label-success">自扫</span>
+                    <span class="label label-danger">限制组</span>
+					<span class="label label-warning"><span class="glyphicon glyphicon-star"></span>0</span>
+				</div>
+               <div class="btn-group mission-action" role="group">
+                    <a type="button" class="btn btn-success t">查看详情</a>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+</div>
+<script>
+	
+
+</script>
+<!--subtemplate $footer -->
