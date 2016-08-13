@@ -3,6 +3,7 @@ $(function(){
     function flushinfo(data,m){
 		//console.log(index);
 		let month=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],d= new Date(parseInt(data.pctime)),status=[
+			"<span class=\"label label-danger\">审核中</span>",
 			"<span class=\"label label-danger\">征集中</span>",
 			"<span class=\"label label-info\">进行中</span>",
 			"<span class=\"label label-success\">已完成</span>"
@@ -24,7 +25,7 @@ $(function(){
                     <div class="mission-info">
                         <h4>自动认领测试1</h4>
                         <div class="label-box mission-info-z">
-                            ${status[data.pstate-1]+imgtype[data.ptype]+pubstat[data.pteam]}
+                            ${status[data.pstate]+imgtype[data.ptype]+pubstat[data.pteam]}
 							<span class="label label-warning">
 							<span class="glyphicon glyphicon-star"></span>${data.pup}</span>
 						</div>
