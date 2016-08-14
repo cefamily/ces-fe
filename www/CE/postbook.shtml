@@ -12,7 +12,7 @@
     <div class="row" style="max-width:800px;margin-left:auto;margin-right:auto">
         <div class="col-md-12" id="main-panel">
             <legend>
-                <h3>发布本子</h3></legend>
+                <h3 style="font-family:cursive">Release</h3></legend>
             <form action="" method="POST" class="form-horizontal" role="form">
                 <div class="form-group tc">
                     <span class="input input--madoka">

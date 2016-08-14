@@ -8,6 +8,8 @@
 #group-panel{
 	display: none;
 }
+
 legend{
-	color: #FFF;
+	color: #FFF;border-bottom: 1px solid #7A7593;
 }
+legend h3{color:#7A7593}
