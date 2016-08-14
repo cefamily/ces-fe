@@ -33,9 +33,10 @@ $(document).ready(function() {
     // --------------图源类型------------
     $("#imgtype").change(function(event) {
         if ($(this).val() == 2) {
-
+            $("#ty").parent().removeClass("active");
             $("#ty").prop("checked", false);
         } else {
+            $("#ty").parent().addClass("active");
             $("#ty").prop("checked", "checked");
         }
     });
