@@ -56,7 +56,7 @@ $(document).ready(function() {
             return null;
         }
 
-        if ($("#public").prop("checked")) {
+        if (!$("#public").prop("checked")) {
             team.push(0);
         } else {
             $(".group-item:checked").each(function(index, el) {
@@ -81,7 +81,7 @@ $(document).ready(function() {
                     $("#bname").val("");
                     $("#iurl").val("");
                     $("#remark").val("");
-                    $("#public").prop("checked", true);
+                    $("#public").prop("checked", false);
 
                     $(".group-item:checked").each(function(index, el) {
                         $(this).prop("checked", false);
