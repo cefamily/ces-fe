@@ -949,6 +949,11 @@
 	-webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
 	transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
 }
+.input__field--madoka:focus + .input__label--madoka .input__label-content--madoka.model-textarea,
+.input--filled .input__label-content--madoka.model-textarea {
+	-webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0,9em, 0);
+	transform: scale3d(0.81, 0.81, 1) translate3d(0, 9em, 0);
+}
 
 /* Kaede */
 .input--kaede {

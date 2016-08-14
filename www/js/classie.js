@@ -86,7 +86,7 @@ if ( typeof define === 'function' && define.amd ) {
 					})();
 				}
 
-				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+				[].slice.call( document.querySelectorAll( '.input__field' ) ).forEach( function( inputEl ) {
 					if( inputEl.value.trim() !== '' ) {
 						classie.add( inputEl.parentNode, 'input--filled' );
 					}
