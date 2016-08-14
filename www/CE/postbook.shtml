@@ -86,7 +86,7 @@
                             <label class="btn btn-checkbox">
                                 <input type="checkbox" autocomplete="off" name="ftype[]" id="qz" value="qz"> 嵌字
                             </label>
-                            <label class="btn btn-checkbox closed">
+                            <label class="btn btn-checkbox closed cd">
                                 <input type="checkbox" autocomplete="off" name="ftype[]" id="ty" value="ty"> 图源
                             </label>
                         </div>
