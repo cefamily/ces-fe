@@ -1,11 +1,13 @@
 <!--subtemplate $header -->
-<link rel="stylesheet" href="../css/home-post.css" />
+<link rel="stylesheet" href="/css/home-post.css" />
 <link rel="stylesheet" href="/lib/input/css/cs-input.css" />
-<link rel="stylesheet" type="text/css" href="/lib/select/css/cs-select.css" />
-<link rel="stylesheet" type="text/css" href="/lib/select/css/cs-skin-elastic.css" />
+<link rel="stylesheet" href="/lib/select/css/cs-select.css" />
+<link rel="stylesheet" href="/lib/checkbox/css/cs-checkbox.css" />
+<link rel="stylesheet" href="/lib/select/css/cs-skin-elastic.css" />
 <script type="text/javascript" src="/js/classie.js"></script>
 <script src="/lib/input/js/inputFx.js"></script>
 <script src="/lib/select/js/selectFx.js"></script>
+<script src="/lib/checkbox/js/checkboxFx.js"></script>
 <script type="text/javascript" src="../js/home-post.js"></script>   
 
 
@@ -58,7 +60,8 @@
                     </span>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">认领职位：</label>
+                    <div style="width:400px;margin:auto">
+                    <!--<label class="col-sm-2 control-label">认领职位：</label>
                     <div class="col-sm-9">
                         <label class="checkbox-inline">
                             <input type="checkbox" id="xt" value="xt" class="job-itme"> 修图
@@ -72,17 +75,27 @@
                         <label class="checkbox-inline">
                             <input type="checkbox" id="ty" value="ty" disabled="disabled" checked="checked" class="job-itme"> 图源
                         </label>
+                    </div>-->
+                        <div class="btn-group t-0" data-toggle="buttons">
+                            <label class="btn btn-checkbox">
+                                <input type="checkbox" autocomplete="off" id="xt" value="xt" >修图
+                            </label>
+                            <label class="btn btn-checkbox">
+                                <input type="checkbox" autocomplete="off" id="fy" value="fy"> 翻译
+                            </label>
+                            <label class="btn btn-checkbox">
+                                <input type="checkbox" autocomplete="off" id="qz" value="qz"> 嵌字
+                            </label>
+                            <label class="btn btn-checkbox disabled closed">
+                                <input type="checkbox" autocomplete="off" id="ty" value="ty" disabled checked> 图源
+                            </label>
+                        </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">是否公开：</label>
-                    <div class="col-sm-9">
-                        <label>
-                            <input type="radio" name="public" id="input1"  value="" checked="checked"> 是
-                        </label>
-                        <label>
-                            <input type="radio" name="public" id="input2" value=""> 否
-                        </label>
+                <div class="form-group tc">
+                    <div style="width:400px;margin:auto">
+                        <input class='tgl tgl-flip' id='public' type='checkbox' name="public">
+                        <label class='tgl-btn' data-tg-off='公开' data-tg-on='私有' for='public'></label>
                     </div>
                 </div>
                 <div class="form-group" id="group-panel">

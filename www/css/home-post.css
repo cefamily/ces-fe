@@ -13,3 +13,13 @@ legend{
 	color: #FFF;border-bottom: 1px solid #7A7593;
 }
 legend h3{color:#7A7593}
+
+.btn-checkbox{
+  color:#7A7593;border:1px solid #7A7593
+}
+.btn-checkbox.active,.btn-checkbox:hover{
+  color:#ccc;border:1px solid #ccc
+}
+.btn-checkbox.disabled:hover:not(.active){
+  color:#7A7593;border:1px solid #7A7593
+}

@@ -22,19 +22,11 @@ $(document).ready(function() {
     });
 
     //--------- 是否公开切换 -----------
-    $("#input2").change(function(event) {
+    $("#public").change(function(event) {
         if ($(this).prop("checked") != "") {
             $("#group-panel").show();
         } else {
             $("#group-panel").hide();
-        }
-    });
-
-    $("#input1").change(function(event) {
-        if ($(this).prop("checked") != "") {
-            $("#group-panel").hide();
-        } else {
-            $("#group-panel").show();
         }
     });
 
@@ -61,7 +53,7 @@ $(document).ready(function() {
             return null;
         }
 
-        if ($("#input1").prop("checked")) {
+        if ($("#public").prop("checked")) {
             team.push(0);
         } else {
             $(".group-item:checked").each(function(index, el) {
@@ -86,7 +78,7 @@ $(document).ready(function() {
                     $("#bname").val("");
                     $("#iurl").val("");
                     $("#remark").val("");
-                    $("#input1").prop("checked", true);
+                    $("#public").prop("checked", true);
 
                     $(".group-item:checked").each(function(index, el) {
                         $(this).prop("checked", false);
