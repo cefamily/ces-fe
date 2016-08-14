@@ -247,6 +247,7 @@
 			if( this.current !== -1 ) {
 				// update placeholder text
 				this.selPlaceholder.textContent = this.selOpts[ this.current ].textContent;
+				$(this.el).change();
 			}
 			classie.remove( this.selEl, 'cs-active' );
 		}
@@ -257,6 +258,7 @@
 			}
 			classie.add( this.selEl, 'cs-active' );
 		}
+		
 	}
 
 	/**

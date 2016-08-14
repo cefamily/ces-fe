@@ -3,9 +3,10 @@
 <link rel="stylesheet" href="../css/component.css" />
 <link rel="stylesheet" type="text/css" href="/lib/select/css/cs-select.css" />
 <link rel="stylesheet" type="text/css" href="/lib/select/css/cs-skin-elastic.css" />
-<script type="text/javascript" src="../js/home-post.js"></script>   
 <script type="text/javascript" src="../js/classie.js"></script>
 <script src="/lib/select/js/selectFx.js"></script>
+<script type="text/javascript" src="../js/home-post.js"></script>   
+
 
     <div class="row" style="max-width:800px;margin-left:auto;margin-right:auto">
         <div class="col-md-12" id="main-panel">
