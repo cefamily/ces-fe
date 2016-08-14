@@ -946,11 +946,16 @@
 
 .input__field--madoka:focus + .input__label--madoka .input__label-content--madoka,
 .input--filled .input__label-content--madoka {
-	-webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
-	transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
+	-webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 3em, 0);
+	transform: scale3d(0.81, 0.81, 1) translate3d(0, 3em, 0);
+}
+.input__field--madoka:focus + .input__label--madoka textarea,
+.input--filled textarea{
+	height: 102.38px !important;
 }
 .input__field--madoka:focus + .input__label--madoka .input__label-content--madoka.model-textarea,
 .input--filled .input__label-content--madoka.model-textarea {
+	
 	-webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0,9em, 0);
 	transform: scale3d(0.81, 0.81, 1) translate3d(0, 9em, 0);
 }

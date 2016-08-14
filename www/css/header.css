@@ -8,6 +8,7 @@
 ::-webkit-scrollbar{width: 6px;height: 6px}
 ::-webkit-scrollbar-thumb {height: 40px;background:#999;border-radius:6px}
 .t,.t *,.t::after,.t *::after{transition: all 0.2s Linear;-moz-transition: all 0.2s Linear;-webkit-transition: all 0.2s Linear;-o-transition: all 0.2s Linear}
+.t-0,.t-0 *,.t-0::after,.t-0 *::after{transition: all 0.2s;-moz-transition: all 0.2s;-webkit-transition: all 0.2s;-o-transition: all 0.2s}
 .t-3,.t-3 *{transition: all 0.3s Linear;-moz-transition: all 0.3s Linear;-webkit-transition: all 0.3s Linear;-o-transition: all 0.3s Linear}
 .t-1,.t-1 *{transition: all 1s;-moz-transition: all 1s;-webkit-transition: all 1s;-o-transition: all 1s}
 .t-2,.t-2 *{transition: all 2s;-moz-transition: all 2s;-webkit-transition: all 2s;-o-transition: all 2s}
