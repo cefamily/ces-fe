@@ -11,8 +11,7 @@ $(document).ready(function() {
             if (data.status == 0) return null;
             var arr = data.info;
             for (var i = 0; i < arr.length; i++) {
-                $("#group-box").append("<label><input type=\"checkbox\" value=\"" + arr[i].tid +
-                    "\" class=\"group-item\">" + arr[i].tname + "</label>");
+                $("#group-box").append('<label class="btn btn-checkbox"><input type="checkbox" autocomplete="off" value="'+arr[i].tid+'" name="team[]">'+arr[i].tname+'</label>');
             }
         },
         error: function(e) {
@@ -24,9 +23,9 @@ $(document).ready(function() {
     //--------- 是否公开切换 -----------
     $("#public").change(function(event) {
         if ($(this).prop("checked") != "") {
-            $("#group-panel").show();
+            $("#group-panel").toggleClass('slider-hidden');
         } else {
-            $("#group-panel").hide();
+            $("#group-panel").toggleClass('slider-hidden');
         }
     });
 
@@ -39,6 +38,9 @@ $(document).ready(function() {
             $("#ty").parent().addClass("active");
             $("#ty").prop("checked", "checked");
         }
+    });
+    $("#ty").change(function(event) {
+        $("#imgtype").change()
     });
 
     // ---------------发布-----------

@@ -41,10 +41,10 @@
                 </div>
                 <div class="form-group tc">
                     <select class="cs-select cs-skin-elastic t" id="imgtype">
-                        <option value="" disabled selected>图源类型</option>
+                        <option value="" disabled>图源类型</option>
                         <option value="0">网源</option>
                         <option value="1">自扫</option>
-                        <option value="2">招图源~</option>
+                        <option value="2" selected>招图源~</option>
                     </select>
                 </div>  
                 
@@ -78,16 +78,16 @@
                     </div>-->
                         <div class="btn-group t-0" data-toggle="buttons">
                             <label class="btn btn-checkbox">
-                                <input type="checkbox" autocomplete="off" id="xt" value="xt" >修图
+                                <input type="checkbox" autocomplete="off" name="ftype[]" id="xt" value="xt" >修图
                             </label>
                             <label class="btn btn-checkbox">
-                                <input type="checkbox" autocomplete="off" id="fy" value="fy"> 翻译
+                                <input type="checkbox" autocomplete="off" name="ftype[]" id="fy" value="fy"> 翻译
                             </label>
                             <label class="btn btn-checkbox">
-                                <input type="checkbox" autocomplete="off" id="qz" value="qz"> 嵌字
+                                <input type="checkbox" autocomplete="off" name="ftype[]" id="qz" value="qz"> 嵌字
                             </label>
-                            <label class="btn btn-checkbox disabled closed">
-                                <input type="checkbox" autocomplete="off" id="ty" value="ty" disabled checked> 图源
+                            <label class="btn btn-checkbox closed">
+                                <input type="checkbox" autocomplete="off" name="ftype[]" id="ty" value="ty"> 图源
                             </label>
                         </div>
                     </div>
@@ -98,16 +98,9 @@
                         <label class='tgl-btn' data-tg-off='公开' data-tg-on='私有' for='public'></label>
                     </div>
                 </div>
-                <div class="form-group" id="group-panel">
-                    <label class="col-sm-2 control-label">选择组：</label>
-                    <div class="col-sm-9" id="group-box">
-                        <label>
-                            <input type="checkbox" value="1" class="group-item"> 组1
-                        </label>
-                        <label>
-                            <input type="checkbox" value="2" class="group-item"> 组2
-                        </label>
-
+                <div class="form-group slider-hidden t-0" id="group-panel">
+                    <div style="width:400px;margin:auto">
+                        <div class="btn-group" id="group-box" data-toggle="buttons"></div>
                     </div>
                 </div>
                 <div class="form-group">
