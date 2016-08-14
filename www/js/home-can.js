@@ -35,7 +35,10 @@ $(function () {
 					</div>
 				</div>`);
 			m.addClass('img-panel');
-			lr.find('.conpa').after(m);
+			if(!m[0].er)lr.find('.conpa').after(m);
+			else{
+				lr.find('.conpa').after('<img src="/img/noimage.jpg">');
+			}
 			lr.appendTo('cache-mission-block');
 			if(box.length==1){
 				lr.appendTo('#col1');
