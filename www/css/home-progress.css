@@ -22,3 +22,12 @@ legend {
 .row{
 	margin-bottom: 20px;
 }
+.btn-checkbox{
+  color:#7A7593;border:1px solid #7A7593
+}
+.btn-checkbox.active,.btn-checkbox:hover{
+  color:#ccc;border:1px solid #ccc;z-index:1
+}
+.btn-checkbox.closed:hover:not(.active){
+  color:#7A7593;border:1px solid #7A7593;z-index:0
+}

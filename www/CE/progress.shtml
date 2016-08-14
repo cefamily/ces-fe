@@ -1,59 +1,82 @@
 <!--subtemplate $header -->
 <link rel="stylesheet" href="/css/home-progress.css" />
+<link rel="stylesheet" href="/lib/input/css/cs-input.css" />
+<link rel="stylesheet" href="/lib/checkbox/css/cs-checkbox.css" />
+<link rel="stylesheet" href="/lib/select/css/cs-skin-elastic.css" />
+
+<script type="text/javascript" src="/js/classie.js"></script>
+<script src="/lib/input/js/inputFx.js"></script>
+<script src="/lib/checkbox/js/checkboxFx.js"></script>
 <script type="text/javascript" src="/js/home-progress.js"></script>
-<div class="container" id="main">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="img-box">
-                <img src="/img/1.jpg" class="img-responsive" alt="Image">
+    <div class="row" style="max-width:1100px;margin-left:auto;margin-right:auto" id="main">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="img-box">
+                    <img src="/img/1.jpg" class="img-responsive" alt="Image">
+                </div>
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <legend>哈哈哈哈</legend>
+                    <dl class="dl-horizontal">
+                        <dt>当前状态:</dt>
+                        <dd>进行中</dd>
+                        <dt>发布时间:</dt>
+                        <dd>2016年8月3日08:56:42</dd>
+                        <dt>图源类型:</dt>
+                        <dd>网源</dd>
+                        <dt>是否公开:</dt>
+                        <dd>公开</dd>
+                        <dt>点击数:</dt>
+                        <dd>12</dd>
+                        <dt>UP数</dt>
+                        <dd>3</dd>
+                    </dl>
+                </div>
             </div>
-            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                <legend>哈哈哈哈</legend>
-                <dl class="dl-horizontal">
-                    <dt>当前状态:</dt>
-                    <dd>进行中</dd>
-                    <dt>发布时间:</dt>
-                    <dd>2016年8月3日08:56:42</dd>
-                    <dt>图源类型:</dt>
-                    <dd>网源</dd>
-                    <dt>是否公开:</dt>
-                    <dd>公开</dd>
-                    <dt>点击数:</dt>
-                    <dd>12</dd>
-                    <dt>UP数</dt>
-                    <dd>3</dd>
-                </dl>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <form action="" method="POST" class="form-horizontal" role="form">
+                    <div class="form-group">
+                        
+                        <div style="width:400px;margin:auto">
+                            <div class="btn-group t-0" data-toggle="buttons">
+                                <label class="btn btn-checkbox active">
+                                    <input type="radio" autocomplete="off" name="type" id="ty" value="ty" checked> 图源
+                                </label>
+                                <label class="btn btn-checkbox">
+                                    <input type="radio" autocomplete="off" name="type" id="xt" value="xt" >修图
+                                </label>
+                                <label class="btn btn-checkbox">
+                                    <input type="radio" autocomplete="off" name="type" id="fy" value="fy"> 翻译
+                                </label>
+                                <label class="btn btn-checkbox">
+                                    <input type="radio" autocomplete="off" name="type" id="qz" value="qz"> 嵌字
+                                </label>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group tc">
+                    <span class="input input--madoka">
+                        <textarea class="input__field input__field--madoka t-0" type="text" id="gtext" rows="4" required="required" style="resize:none;height:43px"></textarea>
+                        <label class="input__label input__label--madoka" for="gtext">
+                            <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+                                <path d="m0,0l404,0l0,77l-404,0l0,-77z"></path>
+                            </svg>
+                            <span class="input__label-content input__label-content--madoka model-textarea">提交内容</span>
+                        </label>
+                    </span>
+                </div>
+                    <div class="form-group">
+                        <div class="col-sm-2 col-sm-offset-2">
+                            <input type="checkbox" value="" id="finsh"> 已完成
+                        </div>
+                        <div class="col-sm-8 col-md-8">
+                            <button class="btn btn-success" type="button" id="sub">提交</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <form action="" method="POST" class="form-horizontal" role="form">
-                <div class="form-group">
-                    <label class="col-sm-2 contral-label">选择职位</label>
-                    <div class="col-sm-8 ">
-                        <input type="radio" name="type" value="ty" checked="checked"> 图源
-                        <input type="radio" name="type" value="xt"> 修图
-                        <input type="radio" name="type" value="fy"> 翻译
-                        <input type="radio" name="type" value="qz"> 嵌字
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 contral-label">提交内容</label>
-                    <div class="col-sm-8 col-md-8">
-                        <textarea id="gtext" class="form-control" rows="3" required="required"></textarea>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-2 col-sm-offset-2">
-                        <input type="checkbox" value="" id="finsh"> 已完成
-                    </div>
-                    <div class="col-sm-8 col-md-8">
-                        <button class="btn btn-success" type="button" id="sub">提交</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
 <!--subtemplate $footer -->
