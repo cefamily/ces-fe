@@ -42,6 +42,9 @@ $(document).ready(function() {
                     <dt>UP数</dt>
                     <dd>${info.pup}</dd>
 					`);
+                $("#img-box>img").error(function(){
+                    $("#img-box>img").attr("src",'/img/noimage.jpg');
+                });
                 $("#img-box>img").attr("src",info.pimg);
                 $("legend").html(info.pname);
             } else {
