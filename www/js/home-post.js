@@ -11,7 +11,7 @@ $(document).ready(function() {
             if (data.status == 0) return null;
             var arr = data.info;
             for (var i = 0; i < arr.length; i++) {
-                $("#group-box").append('<label class="btn btn-checkbox"><input type="checkbox" autocomplete="off" value="'+arr[i].tid+'" name="team[]">'+arr[i].tname+'</label>');
+                $("#group-box").append('<label class="btn btn-checkbox"><input class="group-item" type="checkbox" autocomplete="off" value="'+arr[i].tid+'" name="team[]">'+arr[i].tname+'</label>');
             }
         },
         error: function(e) {
