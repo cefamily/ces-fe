@@ -98,7 +98,7 @@
                         <label class='tgl-btn' data-tg-off='公开' data-tg-on='私有' for='public'></label>
                     </div>
                 </div>
-                <div class="form-group slider-hidden t-0" id="group-panel">
+                <div class="form-group slider-hidden t-0 ofh" id="group-panel">
                     <div style="width:400px;margin:auto">
                         <div class="btn-group" id="group-box" data-toggle="buttons"></div>
                     </div>
