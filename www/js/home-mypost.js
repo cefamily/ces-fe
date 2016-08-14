@@ -23,7 +23,7 @@ $(function(){
 		let lr = $(`<div class="mission-block col-lg-6 col-sm-12">
                 <div class="mission-block-in">
                     <div class="mission-info">
-                        <h4>自动认领测试1</h4>
+                        <h4>${data.pname}</h4>
                         <div class="label-box mission-info-z">
                             ${status[data.pstate]+imgtype[data.ptype]+pubstat[data.pteam]}
 							<span class="label label-warning">
