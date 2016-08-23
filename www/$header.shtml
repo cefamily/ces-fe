@@ -27,7 +27,7 @@ let cookie = (c=>{
     }
     return s;
   })(server.headers.cookie);
-  let userinfo = cookie.userinfo;
+  let userinfo = typeof cookie.userinfo=='object'?cookie.userinfo:{};
 <node-->
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
