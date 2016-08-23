@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
     //验证域名
     if(config.host && req.headers.host!==config.host)return;
     let trueUrl = req.url;
-    //console.log(req.url);
+    //console.log(req.cookie);
     for(let d in rewrite){
         let trueUrl2 = trueUrl.replace(rewrite[d].in,rewrite[d].out);
         if((trueUrl2 != trueUrl) && rewrite[d].plus){

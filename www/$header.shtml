@@ -16,6 +16,19 @@
 </head>
 
 <body>
+<!--node>
+let cookie = (c=>{
+    let s ={};
+    if (!c)return s;
+  　let list = c.split(';');
+    for(let i in list){
+        var p = list[i].split('=');
+      　s[p[0].trim()] = p[i];
+    }
+    return s;
+  })(server.headers.cookie);
+  let userinfo = cookie.userinfo;
+<node-->
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container-fluid">
@@ -62,3 +75,5 @@
       </ul>
     </div>
     <div class="col-sm-12 col-md-10 col-md-offset-2 main">
+
+ 

@@ -27,7 +27,7 @@
             if(d.status){
                 localStorage.login=1;
                 localStorage.userinfo=JSON.stringify(d.info[0]);
-                window.document.cookie = "userinfo="+localStorage.userinfo;
+                window.document.cookie = "userinfo="+localStorage.userinfo+';Path=/';
                 location="/CE/index.shtml"
             }else if(location.pathname!="/login.shtml")location="/login.shtml";
         });
