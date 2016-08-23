@@ -1,9 +1,8 @@
 $(document).ready(function(){
 
   //初始化
-  $.getJSON(window.host+'Home/User/getMyInfo',function(d){
-    if(d.status)location="/CE/index.shtml"
-  });
+  
+  
   $(".img-captcha").attr("src",window.host+"Home/Tool/captcha");
 
   //-----------页面切换--------------

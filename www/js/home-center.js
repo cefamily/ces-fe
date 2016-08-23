@@ -81,22 +81,7 @@ $(function() {
 });
 
 function getUserInfo() {
-    $.ajax({
-        url: window.host + 'Home/User/getMyInfo',
-        type: 'POST',
-        dataType: 'JSON',
-        success: function(data) {
-            console.log(data);
-            if (data.status == 1) {
-                let info = data.info;
-                $("#email").val(info[0].uemail);
-            } else {
-                console.error("未登录");
-            }
-
-        },
-        error: function(e) {
-            console.log(e);
-        }
-    });
+    let z;
+    eval('z = '+localStorage.userinfo);
+    $("#email").val(z.uemail);
 }

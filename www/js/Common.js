@@ -1,9 +1,10 @@
 "use strict";
+
 (()=>{
     $.ajaxSettings.xhrFields={withCredentials: true};
-    window.host="http://api.oniicyann.baka/CES/";
+    //window.host="http://api.oniicyann.baka/CES/";
     //window.host="http://233hd.com/ces/";
-    //window.host="http://d.baka/index.php/";
+    window.host="http://c.baka/index.php/";
 
     let z = location.search.split('-');
     window.GET = {};
@@ -21,4 +22,24 @@
             }
         }
     }
+    if(!localStorage.login){
+        $.getJSON(window.host+'Home/User/getMyInfo',function(d){
+            if(d.status){
+                localStorage.login=1;
+                localStorage.userinfo=JSON.stringify(d.info[0]);
+                window.document.cookie = "userinfo="+localStorage.userinfo;
+                location="/CE/index.shtml"
+            }else if(location.pathname!="/login.shtml")location="/login.shtml";
+        });
+    }else if(location.pathname=="/login.shtml")location="/CE/index.shtml";
+    eval('window.userinfo = '+localStorage.userinfo);
+    $(()=>{
+        $('.welcome').html('欢迎！'+window.userinfo.uname);
+        $('.logout').click(s=>$.post(window.host+'Home/User/userLogout',d=>{
+            delete localStorage.login;location.reload(true)
+        },'json'))
+    })
+    
+    
+
 })();
