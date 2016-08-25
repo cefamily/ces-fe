@@ -1,0 +1,30 @@
+<!--node>
+  let getCookie = name=>{
+      let arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+      if(arr=server.headers.cookie.match(reg))
+      return unescape(arr[2]);
+      else return null;
+  };
+  let userinfo = {};
+  try{
+      eval('userinfo='+getCookie('userinfo'));
+      if(typeof userinfo != 'object')userinfo = {};
+      console.log(userinfo);
+  }catch(e){
+
+  }
+  console.log(server.pathname);
+  if(userinfo.uid){
+  
+    if(server.pathname=='/login.shtml'){
+      M301('/CE/index.shtml');
+      
+    }
+      
+  }else{
+    if(server.pathname!='/login.shtml'){
+      M301('/login.shtml');
+    }
+  }
+
+<node-->

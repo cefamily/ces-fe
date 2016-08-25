@@ -30,9 +30,17 @@ module.exports = function(res,server){
                     data = template.parse_subtemplate(data,server.root);
                     zdata += template.parse(data);
                     //console.log(zdata);
-                    try{eval(zdata)}catch(e){
-                        console.log(e)
+                    function M301(url){
+                        res.setHeader('Location',url);
+                        res.writeHead(301,"Moved Permanently");
+                        res.end();throw 'die'
                     }
+                    let zzrt = 0;
+                    try{eval(zdata)}catch(e){
+                        console.log(e);
+                        if(e=='die')zzrt=1;
+                    }
+                    if(zzrt)return;
                     //console.log(tempFilePath);
 					fs.writeFile(tempFilePath, rawOutStream, function(err) {
                         if(err){
