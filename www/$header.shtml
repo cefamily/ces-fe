@@ -60,7 +60,17 @@
         <li><a href="/CE/my_post.shtml">发起的项目</a></li>
         <li><a href="/CE/my_mission.shtml">认领的项目</a></li>
         <li><a href="/CE/peocenter.shtml">个人资料</a></li>
-        <li><a href="/CE/peocenter.shtml">后台管理</a></li>
+        <!--node>
+        if(userinfo.utype>2){
+        <node-->
+        <li role="separator" class="divider" style="height:1px;background:#fff"></li>
+        <li><a href="/admin/post_list.shtml">项目列表</a></li>
+        <li><a href="/admin/post_check.shtml">审核列表</a></li>
+        <li><a href="/admin/user_list.shtml">用户管理</a></li>
+        <li><a href="/admin/team_list.shtml">小组管理</a></li>
+        <!--node>
+        }
+        <node-->
       </ul>
     </div>
     <div class="col-sm-12 col-md-10 col-md-offset-2 main">
