@@ -1,0 +1,32 @@
+<!--subtemplate $header -->
+<link rel="stylesheet" href="/css/home-post.css" />
+<link rel="stylesheet" href="/lib/input/css/cs-input.css" />
+<link rel="stylesheet" href="/lib/select/css/cs-select.css" />
+<link rel="stylesheet" href="/lib/checkbox/css/cs-checkbox.css" />
+<link rel="stylesheet" href="/lib/select/css/cs-skin-elastic.css" />
+<script type="text/javascript" src="/js/classie.js"></script>
+<script src="/lib/input/js/inputFx.js"></script>
+<script src="/lib/select/js/selectFx.js"></script>
+<script src="/lib/checkbox/js/checkboxFx.js"></script>
+<script type="text/javascript" src="../js/admin-post-list.js"></script>   
+
+
+    <div class="row" style="max-width:800px;margin-left:auto;margin-right:auto">
+        <div class="col-md-12 main-panel" style="margin-bottom:20px">
+            <h4>测试项目</h4>
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+            </div>
+        </div>
+        <div class="col-md-12 main-panel" style="margin-bottom:20px">
+            <h4>测试项目</h4>
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+            </div>
+        </div>
+    </div>
+<!--subtemplate $footer -->
