@@ -5,8 +5,14 @@ String.prototype.timeChange=function(){
 	g.setTime(this*1000);
 	return g.getFullYear()+'-'+(g.getMonth()+1).t2()+'-'+g.getDate().t2()+' '+g.getHours().t2()+":"+g.getMinutes().t2()
 }
+Number.prototype.timeChange=function(){
+    return String(this).timeChange()
+};
 String.prototype.dateChange=function(){
 	var g = new Date();g.setTime(this*1000);return g.getFullYear()+'-'+(g.getMonth()+1).t2()+'-'+g.getDate().t2()
+};
+Number.prototype.dateChange=function(){
+    return String(this).dateChange()
 };
 (()=>{
     $.ajaxSettings.xhrFields={withCredentials: true};
