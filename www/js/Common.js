@@ -7,7 +7,7 @@ String.prototype.timeChange=function(){
 }
 String.prototype.dateChange=function(){
 	var g = new Date();g.setTime(this*1000);return g.getFullYear()+'-'+(g.getMonth()+1).t2()+'-'+g.getDate().t2()
-}
+};
 (()=>{
     $.ajaxSettings.xhrFields={withCredentials: true};
     //window.host="http://api.oniicyann.baka/CES/";
