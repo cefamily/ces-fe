@@ -1,11 +1,19 @@
 "use strict";
-
+Number.prototype.t2=function(){if(this.toString().length===1)return '0'+this;else return this.toString()};
+String.prototype.timeChange=function(){
+	var g = new Date();
+	g.setTime(this*1000);
+	return g.getFullYear()+'-'+(g.getMonth()+1).t2()+'-'+g.getDate().t2()+' '+g.getHours().t2()+":"+g.getMinutes().t2()
+}
+String.prototype.dateChange=function(){
+	var g = new Date();g.setTime(this*1000);return g.getFullYear()+'-'+(g.getMonth()+1).t2()+'-'+g.getDate().t2()
+}
 (()=>{
     $.ajaxSettings.xhrFields={withCredentials: true};
     //window.host="http://api.oniicyann.baka/CES/";
     //window.host="http://233hd.com/ces/";
     window.host="http://c.baka/index.php/";
-
+    
     let z = location.search.split('-');
     window.GET = {};
     if(z.length>1){
