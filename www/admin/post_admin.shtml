@@ -8,12 +8,58 @@
 <script src="/lib/input/js/inputFx.js"></script>
 <script src="/lib/select/js/selectFx.js"></script>
 <script src="/lib/checkbox/js/checkboxFx.js"></script>
-<script type="text/javascript" src="../js/admin-post-list.js"></script>   
+<script type="text/javascript" src="../js/admin-post-admin.js"></script>   
 
 
-    <div class="row tt-list" style="max-width:800px;margin-left:auto;margin-right:auto">
-       <div class="col-md-12 main-panel" style="margin-bottom:20px">
-            <h4>没有任何项目</h4>
+    <div class="row" style="max-width:800px;margin-left:auto;margin-right:auto">
+        <div class="col-md-12" id="main-panel">
+            <legend>
+                <h3 style="font-family:cursive">修改项目信息</h3></legend>
+            <form action="" method="POST" class="form-horizontal" role="form">
+                <input type="hidden" id="pid" name="pid">
+                <div class="form-group tc">
+                    <span class="input input--madoka">
+                        <input class="input__field input__field--madoka" type="text" id="pname" name="pname">
+                        <label class="input__label input__label--madoka" for="pname">
+                            <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+                                <path d="m0,0l404,0l0,77l-404,0l0,-77z"></path>
+                            </svg>
+                            <span class="input__label-content input__label-content--madoka">本子名称</span>
+                        </label>
+                    </span>
+                </div>
+                
+                <div class="form-group tc">
+                    <span class="input input--madoka">
+                        <input class="input__field input__field--madoka" type="text" id="pimg" name="pimg">
+                        <label class="input__label input__label--madoka" for="pimg">
+                            <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+                                <path d="m0,0l404,0l0,77l-404,0l0,-77z"></path>
+                            </svg>
+                            <span class="input__label-content input__label-content--madoka">封面网址</span>
+                        </label>
+                    </span>
+                </div>
+                
+                
+                <div class="form-group tc">
+                    <span class="input input--madoka">
+                        <textarea class="input__field input__field--madoka t-0" type="text" id="premark" name="premark" rows="4" style="resize:none;height:43px"></textarea>
+                        <label class="input__label input__label--madoka" for="premark">
+                            <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+                                <path d="m0,0l404,0l0,77l-404,0l0,-77z"></path>
+                            </svg>
+                            <span class="input__label-content input__label-content--madoka model-textarea">备注：这里可写一些本子的详细信息~</span>
+                        </label>
+                    </span>
+                </div>
+                </form>
+                <div class="form-group">
+                    <div class="col-md-10 col-sm-offset-2">
+                        <button type="button" class="btn btn-primary" id="push-btn">修改（＞ω＜）</button>
+                    </div>
+                </div>
+            
         </div>
     </div>
 <!--subtemplate $footer -->
