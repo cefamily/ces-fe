@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
     // --------初始化--------
+    $("#navlist>li").removeClass('active');
+    $("#navlist>li").eq(2).addClass('active');
     $.ajax({
         url: window.host + "Home/Team/getAllTeamList",
         type: "POST",

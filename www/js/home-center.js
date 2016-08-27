@@ -1,6 +1,8 @@
 $(function() {
 
     // -----初始化--------
+    $("#navlist>li").removeClass('active');
+    $("#navlist>li").eq(5).addClass('active');
     $(".img-captcha").attr("src", window.host + "Home/Tool/captcha");
     getUserInfo();
 
