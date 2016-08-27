@@ -11,7 +11,7 @@ $(function () {
 	};
 	function get(page,clean){
 		llt=0;
-		let data = {page:page};
+		let data = {page:page,type:'state',value:0};
 		$.post(host+'Home/Product/getAllProductList',data,function(d){
 			
 			if(!d.status)return;
@@ -21,11 +21,9 @@ $(function () {
 			for(let r in pro){
 				let z = `<div class="col-md-12 main-panel" style="margin-bottom:20px">
 					<h4>${pro[r].pname}<small> -${pro[r].uname}<em style="color:green">[${status[pro[r].pstate]}]</em></small></h4>
-					<div class="btn-group t" role="group">
-					<a type="button" class="btn btn-default p_xg" href="/admin/post_admin.shtml?pid-${pro[r].pid}">修改详情</a>
-					<a type="button" class="btn btn-default p_gl" href="/admin/post_claim.shtml?pid-${pro[r].pid}">职位管理</a>`;
-					if(pro[r].pftime==0)z+=`<a type="button" class="btn btn-default p_wc" pid="${pro[r].pid}">完成项目</a>`;
-					if(userinfo.utype>3)z+=`<a type="button" class="btn btn-default p_sc" pid="${pro[r].pid}">删除项目</a>`
+					<div class="btn-group t" role="group">`;
+					z+=`<a type="button" class="btn btn-success p_tg" pid="${pro[r].pid}">审核通过</a>`;
+					z+=`<a type="button" class="btn btn-danger p_bh" pid="${pro[r].pid}">审核驳回</a>`
 					z+=`</div>
 					</div>`;
 				$(z).appendTo('.tt-list');
@@ -36,18 +34,18 @@ $(function () {
 
 	}
 	function adde(){
-		$('.p_wc').unbind('click').bind('click',function(){
+		$('.p_tg').unbind('click').bind('click',function(){
 			let pid = $(this).attr('pid');
-			if(confirm('确认完成？')){
-				$.post(host+'Home/Product/changeProduct',{pid:pid,pstate:5},function(d){
+			if(confirm('确认通过？')){
+				$.post(host+'Home/Product/changeProduct',{pid:pid,pstate:1},function(d){
 					if(d.status)location.reload();
 				},'json');
 			}
 		});
-		if(userinfo.utype>3)$('.p_sc').unbind('click').bind('click',function(){
+		$('.p_bh').unbind('click').bind('click',function(){
 			let pid = $(this).attr('pid');
-			if(confirm('确认删除？')){
-				$.post(host+'Home/Product/changeProduct',{pid:pid,pstate:98},function(d){
+			if(confirm('确认驳回？')){
+				$.post(host+'Home/Product/changeProduct',{pid:pid,pstate:-1},function(d){
 					if(d.status)location.reload();
 				},'json');
 			}

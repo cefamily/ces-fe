@@ -11,21 +11,25 @@
 <script type="text/javascript" src="../js/admin-post-list.js"></script>   
 
 
-    <div class="row" style="max-width:800px;margin-left:auto;margin-right:auto">
+    <div class="row tt-list" style="max-width:800px;margin-left:auto;margin-right:auto">
         <div class="col-md-12 main-panel" style="margin-bottom:20px">
-            <h4>测试项目</h4>
-            <div class="btn-group" role="group" aria-label="...">
-                <button type="button" class="btn btn-default">Left</button>
-                <button type="button" class="btn btn-default">Middle</button>
-                <button type="button" class="btn btn-default">Right</button>
+            <h4>测试项目<small>bakabaka</small></h4>
+            <div class="btn-group t" role="group">
+                <a type="button" class="btn btn-default">修改详情</a>
+                <a type="button" class="btn btn-default">职位管理</a>
+                <a type="button" class="btn btn-default">完成项目</a>
+                <a type="button" class="btn btn-default">删除项目</a>
+                
             </div>
         </div>
         <div class="col-md-12 main-panel" style="margin-bottom:20px">
-            <h4>测试项目</h4>
-            <div class="btn-group" role="group" aria-label="...">
-                <button type="button" class="btn btn-default">Left</button>
-                <button type="button" class="btn btn-default">Middle</button>
-                <button type="button" class="btn btn-default">Right</button>
+            <h4>测试项目<small>bakabaka</small></h4>
+            <div class="btn-group t" role="group">
+                <a type="button" class="btn btn-default">修改详情</a>
+                <a type="button" class="btn btn-default">职位管理</a>
+                <a type="button" class="btn btn-default">完成项目</a>
+                <a type="button" class="btn btn-default">删除项目</a>
+                
             </div>
         </div>
     </div>
