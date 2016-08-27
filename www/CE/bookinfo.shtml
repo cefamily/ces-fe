@@ -24,10 +24,10 @@
                     <dd>3</dd>
                 </dl>
                 <div class="col-md-2 col-md-offset-2">
-                <button type="button" class="btn btn-success">我要认领</button>
+                    <button type="button" data-toggle="modal" href='#modal-id' class="btn btn-success">我要认领</button>
                 </div>
                 <div class="col-md-2">
-                <button type="button" class="btn btn-warning">我要+1</button>
+                    <button type="button" class="btn btn-warning" id="myUp">我要+1</button>
                 </div>
             </div>
         </div>
@@ -45,8 +45,8 @@
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse in">
                         <div class="panel-body">
-                             <!--进度区域-->
-                            <div id="typro">                               
+                            <!--进度区域-->
+                            <div id="typro">
                                 <blockquote class="blockqute-danger">
                                     <p>Admin汇报了进度：已获得图源</p>
                                     <footer>2016年8月4日16:45:15</footer>
@@ -69,9 +69,8 @@
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse">
                         <div class="panel-body">
-                        
                             <!--进度区域-->
-                            <div id="xtpro">  </div>
+                            <div id="xtpro"> </div>
                         </div>
                     </div>
                 </div>
@@ -85,9 +84,8 @@
                     </div>
                     <div id="collapseThree" class="panel-collapse collapse">
                         <div class="panel-body">
-                        
                             <!--进度区域-->
-                            <div id="fypro">  </div>
+                            <div id="fypro"> </div>
                         </div>
                     </div>
                 </div>
@@ -101,9 +99,8 @@
                     </div>
                     <div id="collapseFour" class="panel-collapse collapse">
                         <div class="panel-body">
-                        
                             <!--进度区域-->
-                            <div id="qzpro">  </div>
+                            <div id="qzpro"> </div>
                         </div>
                     </div>
                 </div>
@@ -111,5 +108,38 @@
         </div>
     </div>
 </div>
-
-<!--subtemplate $footer -->
+    <div class="modal fade" id="modal-id">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">选择职位</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST" class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <div class="col-sm-12" id="chek">
+                                <label>
+                                    <input type="checkbox" value="qz"> 嵌字
+                                </label>
+                                <label>
+                                    <input type="checkbox" value="xt"> 修图
+                                </label>
+                                <label>
+                                    <input type="checkbox" value="fy"> 翻译
+                                </label>
+                                <label>
+                                    <input type="checkbox" value="ty"> 图源
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="claim">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--subtemplate $footer -->
