@@ -1,5 +1,6 @@
 $(document).ready(function() {
-
+    $("#navlist>li").removeClass('active');
+	$("#navlist>li").eq(2).addClass('active');
     // --------初始化--------
     $("#navlist>li").removeClass('active');
     $("#navlist>li").eq(2).addClass('active');

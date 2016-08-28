@@ -1,4 +1,5 @@
 $(function () {
+	$("#navlist>li").eq(7).addClass('active');
 	let page = 1,llt=1,
 	status ={
 		'-1':'审核未通过',

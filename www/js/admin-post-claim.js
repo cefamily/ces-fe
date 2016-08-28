@@ -1,4 +1,5 @@
 $(function () {
+	$("#navlist>li").eq(7).addClass('active');
 	let work = {
 			'fy':'翻译','ty':'图源','xt':'修图','qz':'嵌字'
 		};

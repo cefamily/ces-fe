@@ -53,8 +53,8 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-3 col-md-2 sidebar">
-      <ul class="nav nav-sidebar" id="navlist">
-        <li class="active"><a href="/CE/index.shtml">Home</a></li>
+      <ul class="nav nav-sidebar t" id="navlist">
+        <li><a href="/CE/index.shtml">Home</a></li>
         <li><a href="/CE/cancilam.shtml">可认领的项目</a></li>
         <li><a href="/CE/postbook.shtml">发起翻译项目</a></li>
         <li><a href="/CE/my_post.shtml">发起的项目</a></li>

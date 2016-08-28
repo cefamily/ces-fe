@@ -1,4 +1,5 @@
 $(function () {
+	$("#navlist>li").eq(7).addClass('active');
 	$.post(host+'Home/Product/getProductByPid',{pid:GET.pid},function(d){
 		if(!d.status){
 			alert(d.info);

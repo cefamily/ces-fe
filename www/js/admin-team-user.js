@@ -1,10 +1,12 @@
 $(function () {
+	$("#navlist>li").eq(10).addClass('active');
 	let work = {
 			'fy':'翻译','ty':'图源','xt':'修图','qz':'嵌字'
 		};
 
 		$.post(host+'Home/Team/getTeamInfo',{tid:GET.tid},function(d){
 			if(!d.status)return;
+			if(!d.info.member.length && !d.info.master.length)return;
 			$('.tt-list').empty();
 			let tid = d.info.team.tid;
 			let pro = d.info.master;

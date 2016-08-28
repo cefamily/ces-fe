@@ -1,4 +1,5 @@
 $(function () {
+	$("#navlist>li").eq(10).addClass('active');
 	let page = 1,llt=1,
 	status ={
 		'-1':'审核未通过',
@@ -21,9 +22,18 @@ $(function () {
 		$.post(host+'Home/Team/getTeamList',data,function(d){
 			
 			if(!d.status)return;
+			if(userinfo.utype>3 && clean){
+				$('.tt-list').empty();
+				let z = `<div class="col-md-12 main-panel" style="margin-bottom:20px">
+					<div class="btn-group t" role="group">`;
+					z+=`<a type="button" class="btn btn-default p_tz">添加组</a>`;
+					z+=`</div>
+					</div>`;
+				$(z).appendTo('.tt-list');
+			}
 			let pro = d.info.teams;
 			if(!pro.length)return;
-			if(clean)$('.tt-list').empty();
+			if(userinfo.utype<4 && clean)$('.tt-list').empty();
 			for(let r in pro){
 				let z = `<div class="col-md-12 main-panel" style="margin-bottom:20px">
 					<h4>${pro[r].tid}:${pro[r].tname}</h4>
@@ -31,6 +41,7 @@ $(function () {
 					z+=`<a type="button" class="btn btn-default p_zy" href="/admin/team_user.shtml?tid-${pro[r].tid}">查看组员</a>`;
 					z+=`<a type="button" class="btn btn-default p_mz" tid="${pro[r].tid}">修改名字</a>`;
 					z+=`<a type="button" class="btn btn-default p_tj" tid="${pro[r].tid}">添加组员</a>`;
+					if(userinfo.utype>3)z+=`<a type="button" class="btn btn-default p_de" tid="${pro[r].tid}">删除小组</a>`;
 					z+=`</div>
 					</div>`;
 				$(z).appendTo('.tt-list');
@@ -41,6 +52,25 @@ $(function () {
 
 	}
 	function adde(){
+		$('.p_tz').unbind('click').bind('click',function(){
+			let z= prompt('设定名字为：');
+			if(z){
+				$.post(host+'Home/Team/addTeam',{tname:z},function(d){
+					if(d.status)location.reload();
+					else alert(d.info)
+				},'json');
+			}
+		});
+		$('.p_de').unbind('click').bind('click',function(){
+			let tid = $(this).attr('tid');
+			let z= confirm('确认删除小组？');
+			if(z){
+				$.post(host+'Home/Team/deleteTeam',{tid:tid},function(d){
+					if(d.status)location.reload();
+					else alert(d.info)
+				},'json');
+			}
+		});
 		$('.p_mz').unbind('click').bind('click',function(){
 			let tid = $(this).attr('tid');
 			let z= prompt('修改名字为：');
