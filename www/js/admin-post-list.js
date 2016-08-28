@@ -42,6 +42,7 @@ $(function () {
 			if(confirm('确认完成？')){
 				$.post(host+'Home/Product/changeProduct',{pid:pid,pstate:5},function(d){
 					if(d.status)location.reload();
+					else alert(d.info)
 				},'json');
 			}
 		});
@@ -51,6 +52,7 @@ $(function () {
 			if(confirm('确认删除？')){
 				$.post(host+'Home/Product/changeProduct',{pid:pid,pstate:98},function(d){
 					if(d.status)location.reload();
+					else alert(d.info)
 				},'json');
 			}
 		})

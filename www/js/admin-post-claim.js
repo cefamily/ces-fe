@@ -39,6 +39,7 @@ $(function () {
 			if(confirm('确认完成认领？')){
 				$.post(host+'Home/Claim/finishClaim',{pid:pid,uid:uid,ctype:ctype},function(d){
 					if(d.status)location.reload();
+					else alert(d.info)
 				},'json');
 			}
 		});
@@ -49,6 +50,7 @@ $(function () {
 			if(confirm('确认取消认领？')){
 				$.post(host+'Home/Claim/cancelClaim',{pid:pid,uid:uid,ctype:ctype},function(d){
 					if(d.status)location.reload();
+					else alert(d.info)
 				},'json');
 			}
 		})

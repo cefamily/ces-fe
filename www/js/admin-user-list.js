@@ -46,6 +46,7 @@ $(function () {
 			if(email){
 				$.post(host+'Home/User/changeUserEmail',{uid:uid,email:email},function(d){
 					if(d.status)location.reload();
+					else alert(d.info)
 				},'json');
 			}
 		});
@@ -57,6 +58,7 @@ $(function () {
 				z=CryptoJS.MD5(z).toString();
 				$.post(host+'Home/User/changeUserPassword',{uid:uid,password:z},function(d){
 					if(d.status)location.reload();
+					else alert(d.info)
 				},'json');
 			}
 		});

@@ -39,6 +39,7 @@ $(function () {
 			if(confirm('确认通过？')){
 				$.post(host+'Home/Product/changeProduct',{pid:pid,pstate:1},function(d){
 					if(d.status)location.reload();
+					else alert(d.info)
 				},'json');
 			}
 		});
@@ -47,6 +48,7 @@ $(function () {
 			if(confirm('确认驳回？')){
 				$.post(host+'Home/Product/changeProduct',{pid:pid,pstate:-1},function(d){
 					if(d.status)location.reload();
+					else alert(d.info)
 				},'json');
 			}
 		})

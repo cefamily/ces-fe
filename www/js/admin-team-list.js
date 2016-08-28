@@ -28,7 +28,7 @@ $(function () {
 				let z = `<div class="col-md-12 main-panel" style="margin-bottom:20px">
 					<h4>${pro[r].tid}:${pro[r].tname}</h4>
 					<div class="btn-group t" role="group">`;
-					z+=`<a type="button" class="btn btn-default p_zy" tid="${pro[r].tid}">查看组员</a>`;
+					z+=`<a type="button" class="btn btn-default p_zy" href="/admin/team_user.shtml?tid-${pro[r].tid}">查看组员</a>`;
 					z+=`<a type="button" class="btn btn-default p_mz" tid="${pro[r].tid}">修改名字</a>`;
 					z+=`<a type="button" class="btn btn-default p_tj" tid="${pro[r].tid}">添加组员</a>`;
 					z+=`</div>
@@ -45,8 +45,9 @@ $(function () {
 			let tid = $(this).attr('tid');
 			let z= prompt('修改名字为：');
 			if(z){
-				$.post(host+'Home/Team/changeTeam',{tid:tid,name:z},function(d){
+				$.post(host+'Home/Team/changeTeamName',{tid:tid,tname:z},function(d){
 					if(d.status)location.reload();
+					else alert(d.info)
 				},'json');
 			}
 		});
@@ -57,6 +58,7 @@ $(function () {
 			if(z){
 				$.post(host+'Home/Team/addMember',{tid:tid,type:'uid',value:z},function(d){
 					if(d.status)location.reload();
+					else alert(d.info)
 				},'json');
 			}
 		});
