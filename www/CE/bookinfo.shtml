@@ -27,7 +27,7 @@
                     <button type="button" data-toggle="modal" href='#modal-id' class="btn btn-success">我要认领</button>
                 </div>
                 <div class="col-md-2">
-                    <button type="button" class="btn btn-warning" id="myUp">我要+1</button>
+                    <button type="button" class="btn btn-warning dn" id="myUp">我要+1</button>
                 </div>
             </div>
         </div>

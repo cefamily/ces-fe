@@ -3,13 +3,14 @@ $(function () {
 	$("#navlist>li").eq(0).addClass('active');
 	function flushinfo(data,m,box){
 		//console.log(index);
-		let month=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],d= new Date(parseInt(data.pctime)),status=[
-			"<span class=\"label label-danger\">审核中</span>",
-			"<span class=\"label label-danger\">征集中</span>",
-			"<span class=\"label label-danger\">待定</span>",
-			"<span class=\"label label-info\">进行中</span>",
-			"<span class=\"label label-success\">已完成</span>"
-		],imgtype=[
+		let month=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],d= new Date(parseInt(data.pctime)),status={
+			'-1':"<span class=\"label label-danger\">审核中</span>",
+			'0':"<span class=\"label label-danger\">审核中</span>",
+			'1':"<span class=\"label label-danger\">征集中</span>",
+			'2':"<span class=\"label label-danger\">待定</span>",
+			'3':"<span class=\"label label-info\">进行中</span>",
+			'5':"<span class=\"label label-success\">已完成</span>"
+		},imgtype=[
 			"<span class=\"label label-warning\">网源</span>",
 			"<span class=\"label label-success\">自扫</span>",
 			"<span class=\"label label-danger\">暂无图源</span>"
@@ -33,7 +34,7 @@ $(function () {
 								title="${data.pname}">${data.pname}
 						</div>
 						<div class="label-box">
-							${status[data.pstate-1]+imgtype[data.ptype]+pubstat[data.pteam]}
+							${status[data.pstate]+imgtype[data.ptype]+pubstat[data.pteam]}
 							<span class="label label-warning"><span class="glyphicon glyphicon-star"></span>${data.pup}</span>
 						</div>
 					</div>

@@ -21,6 +21,15 @@ Number.prototype.dateChange=function(){
     window.host="http://c.baka/index.php/";
     
     let z = location.search.split('-');
+    window.ProState ={
+		'-1':'审核未通过',
+		'0':'审核中',
+        '1':"征集中",
+        '3':"进行中",
+        '5':"已完成",
+		'98':'已删除',
+		'99':'已清理'
+	};
     window.GET = {};
     if(z.length>1){
         z[0] = z[0].slice(1);

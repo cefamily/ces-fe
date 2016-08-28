@@ -96,9 +96,12 @@ $(document).ready(function() {
                 data: { "pid": pid, "ctype": value },
                 success: function(data) {
                     console.log(data);
-                    if (data.status == 0) {
+                    if (!data.status) {
                         arr[arr.length] = value;
-                        alert(value + "职位认领失败，原因是:" + data.info);
+                        alert(data.info);
+                    }else{
+                        alert("认领成功");
+                        $("#modal-id").modal('hide');
                     }
                 },
                 error: function(e) {
@@ -108,16 +111,7 @@ $(document).ready(function() {
             });
         });
 
-        if (arr.length > 0) {
-            let temp;
-            for (let i = 0; i < arr.length; i++) {
-                temp += arr[i] + ",";
-            }
-            alert(temp + "职位认领失败，请重试");
-        } else {
-            alert("认领成功");
-            $("#modal-id").modal('hide');
-        }
+        
 
     });
 
