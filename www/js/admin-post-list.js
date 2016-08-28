@@ -24,7 +24,7 @@ $(function () {
 					<div class="btn-group t" role="group">
 					<a type="button" class="btn btn-default p_xg" href="/admin/post_admin.shtml?pid-${pro[r].pid}">修改详情</a>
 					<a type="button" class="btn btn-default p_gl" href="/admin/post_claim.shtml?pid-${pro[r].pid}">职位管理</a>`;
-					if(pro[r].pftime==0)z+=`<a type="button" class="btn btn-default p_jx" pid="${pro[r].pid}">进行项目</a>`;
+
 					if(pro[r].pftime==0)z+=`<a type="button" class="btn btn-default p_wc" pid="${pro[r].pid}">完成项目</a>`;
 					if(userinfo.utype>3)z+=`<a type="button" class="btn btn-default p_sc" pid="${pro[r].pid}">删除项目</a>`
 					z+=`</div>
@@ -45,14 +45,7 @@ $(function () {
 				},'json');
 			}
 		});
-		$('.p_jx').unbind('click').bind('click',function(){
-			let pid = $(this).attr('pid');
-			if(confirm('确认完成？')){
-				$.post(host+'Home/Product/changeProduct',{pid:pid,pstate:3},function(d){
-					if(d.status)location.reload();
-				},'json');
-			}
-		});
+
 		if(userinfo.utype>3)$('.p_sc').unbind('click').bind('click',function(){
 			let pid = $(this).attr('pid');
 			if(confirm('确认删除？')){

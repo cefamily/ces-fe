@@ -40,7 +40,16 @@
                         </label>
                     </span>
                 </div>
-                
+                <div class="form-group tc">
+                    <select class="cs-select cs-skin-elastic t" id="pstate" name="pstate">
+                        <option value="-1">审核未通过</option>
+                        <option value="0">审核中</option>
+                        <option value="1">征集中</option>
+                        <option value="3" selected>进行中</option>
+                        <option value="5" selected>已完成</option>
+                        <option value="98" selected>已删除</option>
+                    </select>
+                </div>  
                 
                 <div class="form-group tc">
                     <span class="input input--madoka">
