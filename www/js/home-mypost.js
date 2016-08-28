@@ -32,8 +32,9 @@ $(function(){
 							<span class="glyphicon glyphicon-star"></span>${data.pup}</span>
 						</div>
 						
-                        <div class="btn-group mission-action" role="group">
-                            <a href="/CE/bookinfo.shtml?id-${data.pid}" type="button" class="btn btn-success t">查看详情</a>
+                        <div class="btn-group mission-action" role="group">`+
+							(userinfo.utype>2?`<a href="/admin/post_admin.shtml?pid-${data.pid}" type="button" class="btn btn-warning t">修改</a>`:'')
+                            +`<a href="/CE/bookinfo.shtml?id-${data.pid}" type="button" class="btn btn-success t">查看详情</a>
                         </div>
                     </div>
                 </div>

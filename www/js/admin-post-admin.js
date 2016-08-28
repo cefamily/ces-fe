@@ -17,7 +17,7 @@ $(function () {
 				alert('修改失败');return
 			}else{
 				alert('修改成功');
-				location = '/admin/post_list.shtml'
+				location = '/CE/bookinfo.shtml?id-'+GET.pid
 			}
 		},'json')
 	})

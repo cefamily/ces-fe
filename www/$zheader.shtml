@@ -9,11 +9,11 @@
   try{
       eval('userinfo='+getCookie('userinfo'));
       if(typeof userinfo != 'object')userinfo = {};
-      console.log(userinfo);
+
   }catch(e){
 
   }
-  console.log(server.pathname);
+
   if(userinfo.uid){
   
     if(server.pathname=='/login.shtml'){

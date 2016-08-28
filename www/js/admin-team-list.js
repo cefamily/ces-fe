@@ -18,18 +18,19 @@ $(function () {
 	function get(page,clean){
 		llt=0;
 		let data = {page:page};
-		$.post(host+'Home/User/getUserList',data,function(d){
+		$.post(host+'Home/Team/getTeamList',data,function(d){
 			
 			if(!d.status)return;
-			let pro = d.info.users;
+			let pro = d.info.teams;
 			if(!pro.length)return;
 			if(clean)$('.tt-list').empty();
 			for(let r in pro){
 				let z = `<div class="col-md-12 main-panel" style="margin-bottom:20px">
-					<h4>${pro[r].uid}:${pro[r].uname}<small> -${pro[r].uemail}<em style="color:green">[${utype[pro[r].utype]}]</em></small></h4>
+					<h4>${pro[r].tid}:${pro[r].tname}</h4>
 					<div class="btn-group t" role="group">`;
-					z+=`<a type="button" class="btn btn-default p_yx" uid="${pro[r].uid}">修改邮箱</a>`;
-					z+=`<a type="button" class="btn btn-default p_ma" uid="${pro[r].uid}">修改密码</a>`
+					z+=`<a type="button" class="btn btn-default p_zy" tid="${pro[r].tid}">查看组员</a>`;
+					z+=`<a type="button" class="btn btn-default p_mz" tid="${pro[r].tid}">修改名字</a>`;
+					z+=`<a type="button" class="btn btn-default p_tj" tid="${pro[r].tid}">添加组员</a>`;
 					z+=`</div>
 					</div>`;
 				$(z).appendTo('.tt-list');
@@ -40,22 +41,21 @@ $(function () {
 
 	}
 	function adde(){
-		$('.p_yx').unbind('click').bind('click',function(){
-			let uid = $(this).attr('uid');
-			let email= prompt('修改邮箱为：');
-			if(email){
-				$.post(host+'Home/User/changeUserEmail',{uid:uid,email:email},function(d){
+		$('.p_mz').unbind('click').bind('click',function(){
+			let tid = $(this).attr('tid');
+			let z= prompt('修改名字为：');
+			if(z){
+				$.post(host+'Home/Team/changeTeam',{tid:tid,name:z},function(d){
 					if(d.status)location.reload();
 				},'json');
 			}
 		});
 
-		$('.p_ma').unbind('click').bind('click',function(){
-			let uid = $(this).attr('uid');
-			let z= prompt('修改密码为：');
+		$('.p_tj').unbind('click').bind('click',function(){
+			let tid = $(this).attr('tid');
+			let z= prompt('添加用户ID：');
 			if(z){
-				z=CryptoJS.MD5(z).toString();
-				$.post(host+'Home/User/changeUserPassword',{uid:uid,password:z},function(d){
+				$.post(host+'Home/Team/addMember',{tid:tid,type:'uid',value:z},function(d){
 					if(d.status)location.reload();
 				},'json');
 			}
