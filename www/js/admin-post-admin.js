@@ -8,6 +8,7 @@ $(function () {
 		for(let z in d.info){
 			$('[name='+z+']').val(d.info[z]).focus();
 		}
+		$('.cs-options [data-value='+d.info.pstate+']').click().click();
 		
 
 	},'json')
