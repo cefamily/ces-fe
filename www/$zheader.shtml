@@ -14,7 +14,7 @@
 
   }
 
-  if(userinfo.uid){
+  if(userinfo && userinfo.uid){
   
     if(server.pathname=='/login.shtml'){
       M301('/CE/index.shtml');
