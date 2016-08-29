@@ -8,12 +8,9 @@
   let userinfo = {};
   try{
       eval('userinfo='+getCookie('userinfo'));
-      if(typeof userinfo != 'object')userinfo = {};
-
   }catch(e){
-
   }
-
+  if(typeof userinfo != 'object')userinfo = {};
   if(userinfo && userinfo.uid){
   
     if(server.pathname=='/login.shtml'){
