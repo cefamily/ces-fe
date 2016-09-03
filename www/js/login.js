@@ -78,7 +78,7 @@ $(document).ready(function(){
             alert(data.info);
             return null;
         }else{
-          alert("登录成功");location.reload(true);
+          location.reload(true);
         }
       },
       error: function (e) {
