@@ -1,4 +1,5 @@
 <!--node>
+  res.setHeader("Cache-Control", "no_cache");
   let getCookie = name=>{
       let arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
       if(arr=server.headers.cookie.match(reg))
