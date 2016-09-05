@@ -14,8 +14,9 @@ $(function() {
 
     $("#changeEmail").click(function(event) {
         let email = $("#email").val().trim();
+        let nickname = $("#nickname").val().trim();
         let captcha = $("#e-captcha").val().trim();
-        if (email == "" || captcha == "") {
+        if (email == "" || nickname == "" || captcha == "") {
             alert("请填写完整");
             return null;
         }
@@ -24,7 +25,7 @@ $(function() {
             url: window.host + 'Home/User/changeEmail',
             type: 'POST',
             dataType: 'JSON',
-            data: { 'email': email, 'captcha': captcha },
+            data: { 'email': email,nickname:nickname ,'captcha': captcha },
             success: function(data) {
                 if (data.status == 1) {
                     alert("修改成功");
@@ -91,6 +92,7 @@ function getUserInfo() {
             if (data.status == 1) {
                 let info = data.info;
                 $("#email").val(info[0].uemail);
+                $("#nickname").val(info[0].nickname);
             } else {
                 console.error("未登录");
             }
