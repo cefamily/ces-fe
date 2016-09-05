@@ -29,7 +29,14 @@ $(function() {
             success: function(data) {
                 if (data.status == 1) {
                     alert("修改成功");
-                    getUserInfo();
+                    $.getJSON(window.host+'Home/User/getMyInfo',function(d){
+                        if(d.status){
+                            localStorage.login=1;
+                            localStorage.userinfo=JSON.stringify(d.info[0]);
+                            window.document.cookie = "userinfo="+localStorage.userinfo+';Path=/';
+                            location.reload(true);
+                        }
+                    });
                 }else{
                 	alert(data.info);
                 }
@@ -68,14 +75,6 @@ $(function() {
     			console.log(data);
     			if(data.status==1){
     				alert("修改成功");
-                    $.getJSON(window.host+'Home/User/getMyInfo',function(d){
-                        if(d.status){
-                            localStorage.login=1;
-                            localStorage.userinfo=JSON.stringify(d.info[0]);
-                            window.document.cookie = "userinfo="+localStorage.userinfo+';Path=/';
-                            location.reload(true);return;
-                        }
-                    });
     			}else{
     				alert(data.info);
     			}
