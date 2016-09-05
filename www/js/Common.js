@@ -1,4 +1,6 @@
 "use strict";
+window.btoa=function(s){return CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(s))}
+window.atob=function(s){return CryptoJS.enc.Base64.parse(s).toString(CryptoJS.enc.Utf8)}
 Number.prototype.t2=function(){if(this.toString().length===1)return '0'+this;else return this.toString()};
 String.prototype.timeChange=function(){
 	var g = new Date();

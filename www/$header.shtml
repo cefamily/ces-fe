@@ -15,6 +15,7 @@
   <script type="text/javascript" src="/lib/jquery/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="/lib/bootstrap/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="/lib/md5.js"></script>
+  <script src="http://apps.bdimg.com/libs/crypto-js/3.1.2/components/enc-base64-min.js" type="text/javascript"></script>
   <script type="text/javascript" src="/js/Common.js"></script>
 <!--   <script type="text/javascript" src="/js/home-index.js"></script> -->
 </head>
