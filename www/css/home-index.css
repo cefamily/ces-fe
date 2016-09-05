@@ -46,6 +46,18 @@
     margin-left:auto;margin-right:auto
   }
 }
+@media (min-width: 768px){
+  .indexList{
+    max-width:600px;
+    margin-left:auto;margin-right:auto
+  }
+}
+@media (max-width: 768px){
+  .indexList{
+    max-width:300px;
+    margin-left:auto;margin-right:auto
+  }
+}
 .cache-mission-block{
   width: 200px;
 }
