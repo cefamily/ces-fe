@@ -39,10 +39,9 @@
 .label-box > .label{
   margin-right: 5px;
 }
-
-@media (min-width: 900px){
+@media (max-width: 768px){
   .indexList{
-    max-width:900px;
+    max-width:300px;
     margin-left:auto;margin-right:auto
   }
 }
@@ -52,12 +51,14 @@
     margin-left:auto;margin-right:auto
   }
 }
-@media (max-width: 768px){
+@media (min-width: 900px){
   .indexList{
-    max-width:300px;
+    max-width:900px;
     margin-left:auto;margin-right:auto
   }
 }
+
+
 .cache-mission-block{
   width: 200px;
 }
