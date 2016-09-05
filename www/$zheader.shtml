@@ -1,5 +1,5 @@
 <!--node>
-  res.setHeader("Expires", '0');
+  res.setHeader("Expires", 'Mon, 20 Jul 2009 23:00:00 GMT');
   res.setHeader("Cache-Control", "no-cache");
   res.setHeader("Pragma", "no-cache");
   let getCookie = name=>{
