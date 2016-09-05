@@ -5,9 +5,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CE家族社</title>
-  <META HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
-  <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> 
-  <META HTTP-EQUIV="Expires" CONTENT="0"> 
+  <META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+  <META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate"> 
+  <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT"> 
+  <META HTTP-EQUIV="expires" CONTENT="0"> 
   <link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/dashboard.css" />
   <link rel="stylesheet" href="/css/header.css" />
