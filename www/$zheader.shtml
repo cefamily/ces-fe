@@ -10,7 +10,8 @@
   };
   let userinfo = {};
   try{
-      eval('userinfo='+getCookie('userinfo'));
+      let buff = new Buffer(getCookie('userinfo'), 'base64');
+      eval('userinfo='+buff.toString());
   }catch(e){
   }
   if(typeof userinfo != 'object')userinfo = {};

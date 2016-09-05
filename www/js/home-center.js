@@ -33,7 +33,7 @@ $(function() {
                         if(d.status){
                             localStorage.login=1;
                             localStorage.userinfo=JSON.stringify(d.info[0]);
-                            window.document.cookie = "userinfo="+localStorage.userinfo+';Path=/';
+                            window.document.cookie = "userinfo="+btoa(localStorage.userinfo)+';Path=/';
                             location.reload(true);
                         }
                     });
