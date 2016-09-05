@@ -68,6 +68,14 @@ $(function() {
     			console.log(data);
     			if(data.status==1){
     				alert("修改成功");
+                    $.getJSON(window.host+'Home/User/getMyInfo',function(d){
+                        if(d.status){
+                            localStorage.login=1;
+                            localStorage.userinfo=JSON.stringify(d.info[0]);
+                            window.document.cookie = "userinfo="+localStorage.userinfo+';Path=/';
+                            location.reload();
+                        }
+                    });
     			}else{
     				alert(data.info);
     			}
@@ -83,12 +91,23 @@ $(function() {
 
 });
 function getUserInfo() {
-        $.getJSON(window.host+'Home/User/getMyInfo',function(d){
-            if(d.status){
-                localStorage.login=1;
-                localStorage.userinfo=JSON.stringify(d.info[0]);
-                window.document.cookie = "userinfo="+localStorage.userinfo+';Path=/';
-                location.reload(true);
+    $.ajax({
+        url: window.host + 'Home/User/getMyInfo',
+        type: 'POST',
+        dataType: 'JSON',
+        success: function(data) {
+            console.log(data);
+            if (data.status == 1) {
+                let info = data.info;
+                $("#email").val(info[0].uemail);
+                $("#nickname").val(info[0].nickname);
+            } else {
+                console.error("未登录");
             }
-        });
+
+        },
+        error: function(e) {
+            console.log(e);
+        }
+    });
 }
