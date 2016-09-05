@@ -31,6 +31,12 @@ Number.prototype.dateChange=function(){
 		'99':'已清理'
 	};
     window.GET = {};
+    window.getCookie = name=>{
+        let arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=server.headers.cookie.match(reg))
+        return unescape(arr[2]);
+        else return null;
+    };
     if(z.length>1){
         z[0] = z[0].slice(1);
         let g = window.GET;
@@ -45,7 +51,7 @@ Number.prototype.dateChange=function(){
             }
         }
     }
-    if(!document.cookie || !localStorage.login){
+    if(!getCookie('userinfo') || !localStorage.login){
         $.getJSON(window.host+'Home/User/getMyInfo',function(d){
             if(d.status){
                 localStorage.login=1;
