@@ -40,9 +40,9 @@
   margin-right: 5px;
 }
 @media (max-width: 768px){
-  .indexList{
-    max-width:300px;
-    margin-left:auto;margin-right:auto
+  .indexList .img-panel{
+    width:100%;
+    
   }
 }
 @media (min-width: 768px){
