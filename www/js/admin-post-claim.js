@@ -13,7 +13,7 @@ $(function () {
 				let t = [pro[r].ctype];
 				for(let k in t){
 					let z = `<div class="col-md-12 main-panel" style="margin-bottom:20px">
-						<h4>${pro[r].uname}<small> -${work[t[k]]}<em style="color:green">[`;
+						<h4>${pro[r].nickname}(${pro[r].uname})<small> -${work[t[k]]}<em style="color:green">[`;
 						z+=pro[r].cfinish!=0?'已完成':'未完成';
 						z+=`]</em></small></h4>
 						<div class="btn-group t" role="group">`;

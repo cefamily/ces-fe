@@ -21,7 +21,7 @@ $(function () {
 			if(clean)$('.tt-list').empty();
 			for(let r in pro){
 				let z = `<div class="col-md-12 main-panel" style="margin-bottom:20px">
-					<h4>${pro[r].pname}<small> -${pro[r].uname}<em style="color:green">[${status[pro[r].pstate]}]</em></small></h4>
+					<h4>${pro[r].pname}<small> -${pro[r].nickname}(${pro[r].uname})<em style="color:green">[${status[pro[r].pstate]}]</em></small></h4>
 					<div class="btn-group t" role="group">`;
 					z+=`<a type="button" class="btn btn-success p_tg" pid="${pro[r].pid}">审核通过</a>`;
 					z+=`<a type="button" class="btn btn-danger p_bh" pid="${pro[r].pid}">审核驳回</a>`

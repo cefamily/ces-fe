@@ -27,7 +27,7 @@ $(function () {
 			if(clean)$('.tt-list').empty();
 			for(let r in pro){
 				let z = `<div class="col-md-12 main-panel" style="margin-bottom:20px">
-					<h4>${pro[r].uid}:${pro[r].uname}<small> -${pro[r].uemail}<em style="color:green">[${utype[pro[r].utype]}]</em></small></h4>
+					<h4>${pro[r].uid}:${pro[r].nickname}(${pro[r].uname})<small> -${pro[r].uemail}<em style="color:green">[${utype[pro[r].utype]}]</em></small></h4>
 					<div class="btn-group t" role="group">`;
 					z+=`<a type="button" class="btn btn-default p_yx" uid="${pro[r].uid}">修改邮箱</a>`;
 					z+=`<a type="button" class="btn btn-default p_ma" uid="${pro[r].uid}">修改密码</a>`

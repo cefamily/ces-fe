@@ -32,7 +32,7 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right visible-md visible-lg" >
-        <li><a class="welcome" href="#">欢迎！${userinfo.uname}</a></li>
+        <li><a class="welcome" href="#">欢迎！${userinfo.nickname}</a></li>
         <li><a class="logout" href="#">退出</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right visible-xs visible-sm">
@@ -42,7 +42,7 @@
         <li><a href="/CE/my_post.shtml">发起的项目</a></li>
         <li><a href="/CE/my_mission.shtml">认领的项目</a></li>
         <li><a href="/CE/peocenter.shtml">个人中心</a></li>
-        <li><a class="welcome" href="#">欢迎！${userinfo.uname}</a></li>
+        <li><a class="welcome" href="#">欢迎！${userinfo.nickname}</a></li>
         <li><a class="logout" href="#">退出</a></li>
       </ul>
 

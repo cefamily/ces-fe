@@ -12,7 +12,7 @@ $(function () {
 			let pro = d.info.master;
 			for(let r in pro){
 				let z = `<div class="col-md-12 main-panel" style="margin-bottom:20px">
-						<h4>${pro[r].uname}<small><em style="color:green">[组长]</em></small></h4>
+						<h4>${pro[r].nickname}(${pro[r].uname})<small><em style="color:green">[组长]</em></small></h4>
 						<div class="btn-group t" role="group">`;
 						if(userinfo.utype>3)z+=`<a type="button" class="btn btn-success p_cz" uid="${pro[r].uid}" tid="${tid}">撤销组长</a>`;
 						if(userinfo.utype>3)z+=`<a type="button" class="btn btn-danger p_tc" uid="${pro[r].uid}" tid="${tid}">踢出小组</a>`
@@ -23,7 +23,7 @@ $(function () {
 			pro = d.info.member;
 			for(let r in pro){
 				let z = `<div class="col-md-12 main-panel" style="margin-bottom:20px">
-						<h4>${pro[r].uname}<small><em style="color:green">[组员]</em></small></h4>
+						<h4>${pro[r].nickname}(${pro[r].uname})<small><em style="color:green">[组员]</em></small></h4>
 						<div class="btn-group t" role="group">`;
 						if(userinfo.utype>3)z+=`<a type="button" class="btn btn-success p_sz" uid="${pro[r].uid}" tid="${tid}">设为组长</a>`;
 						z+=`<a type="button" class="btn btn-danger p_tc" uid="${pro[r].uid}" tid="${tid}">踢出小组</a>`
