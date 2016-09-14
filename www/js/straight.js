@@ -17,7 +17,7 @@
         for(var d in src){
             var s = src[d];
             if(typeof s!='object' || !s.src){console.warn('IMG OBJECT , TYPE ERROR');continue;}n++;
-            k.add(()=>{
+            k.add(function(){
                 var img=new Image();img.addEventListener('error',e=>{
                     console.error('图片加载失败');img.er = 1;s.callback(img,k);if(!inner)k.run()
                 });img.addEventListener('load',e=>{

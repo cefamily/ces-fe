@@ -136,7 +136,7 @@ $(function () {
 						}
 					)
 				}
-				loadPic(imgs,()=>{
+				loadPic(imgs,function(){
 					llt = 1;
 				});
 				

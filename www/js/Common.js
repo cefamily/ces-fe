@@ -16,7 +16,7 @@ String.prototype.dateChange=function(){
 Number.prototype.dateChange=function(){
     return String(this).dateChange()
 };
-(()=>{
+(function(){
     $.ajaxSettings.xhrFields={withCredentials: true};
     //window.host="http://api.oniicyann.baka/CES/";
     //window.host="http://233hd.com/ces/";
@@ -64,7 +64,7 @@ Number.prototype.dateChange=function(){
         });
     }
     eval('window.userinfo = '+localStorage.userinfo);
-    $(()=>{
+    $(function(){
         $('.logout').click(s=>$.post(window.host+'Home/User/userLogout',d=>{
             var exp = new Date();
             exp.setTime(exp.getTime() - 1000);
