@@ -32,5 +32,5 @@ legend {
   color:#7A7593;border:1px solid #7A7593;z-index:0
 }
 .tgl-flip + .tgl-btn:after, .tgl-flip + .tgl-btn:before{
-    font-size: 0.75%
+    font-size: 12px;
 }
