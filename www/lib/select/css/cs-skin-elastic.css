@@ -11,9 +11,8 @@
 
 div.cs-skin-elastic {
 	background: transparent;
-	font-size: 0.75%;
+	font-size: 12px;
 	font-weight: 700;
-	height:41px;
 	color: #7A7593;
 }
 
@@ -77,6 +76,7 @@ div.cs-skin-elastic {
 	transform: translate3d(0,-25px,0);
 	-webkit-transition: opacity 0.15s, -webkit-transform 0.15s;
 	transition: opacity 0.15s, transform 0.15s;
+	font-size:12px;
 }
 
 .cs-skin-elastic.cs-active .cs-options ul li {
