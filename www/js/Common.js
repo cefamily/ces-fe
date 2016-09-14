@@ -33,7 +33,7 @@ Number.prototype.dateChange=function(){
 		'99':'已清理'
 	};
     window.GET = {};
-    window.getCookie = name=>{
+    window.getCookie = function(name){
         var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
         if(arr=document.cookie.match(reg))
         return unescape(arr[2]);
@@ -65,12 +65,12 @@ Number.prototype.dateChange=function(){
     }
     eval('window.userinfo = '+localStorage.userinfo);
     $(function(){
-        $('.logout').click(s=>$.post(window.host+'Home/User/userLogout',d=>{
+        $('.logout').click(function(s){$.post(window.host+'Home/User/userLogout',function(d){
             var exp = new Date();
             exp.setTime(exp.getTime() - 1000);
             document.cookie= "userinfo=0;Path=/;expires="+exp.toGMTString();
             delete localStorage.login;location.reload(true);
-        },'json'))
+        },'json')})
     })
     
     

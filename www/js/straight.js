@@ -19,9 +19,9 @@
             if(typeof s!='object' || !s.src){console.warn('IMG OBJECT , TYPE ERROR');continue;}n++;
             k.add(function(){
                 var s = src[yuid++];
-                var img=new Image();img.addEventListener('error',e=>{
+                var img=new Image();img.addEventListener('error',function(e){
                     console.error('图片加载失败');img.er = 1;s.callback(img,k);if(!inner)k.run()
-                });img.addEventListener('load',e=>{
+                });img.addEventListener('load',function(e){
                     if(s.callback && typeof s.callback == 'function')s.callback(img,k);if(!inner)k.run()
                 });img.src = s.src
             });
