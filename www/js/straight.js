@@ -13,7 +13,7 @@
             if(typeof src != 'string'){console.error('参数错误');return}
             src=[{src:src,callback:callback}];callback=null;
         }
-        var k = new SYNC,n=0,yuid;
+        var k = new SYNC,n=0,yuid=0;
         for(var d in src){
             var s = src[d];
             if(typeof s!='object' || !s.src){console.warn('IMG OBJECT , TYPE ERROR');continue;}n++;
