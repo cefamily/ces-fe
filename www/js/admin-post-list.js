@@ -1,6 +1,6 @@
 $(function () {
 	$("#navlist>li").eq(7).addClass('active');
-	let page = 1,llt=1,
+	var page = 1,llt=1,
 	status ={
 		'-1':'审核未通过',
 		'0':'审核中',
@@ -12,15 +12,15 @@ $(function () {
 	};
 	function get(page,clean){
 		llt=0;
-		let data = {page:page};
+		var data = {page:page};
 		$.post(host+'Home/Product/getAllProductList',data,function(d){
 			
 			if(!d.status)return;
-			let pro = d.info.products;
+			var pro = d.info.products;
 			if(!pro.length)return;
 			if(clean)$('.tt-list').empty();
-			for(let r in pro){
-				let z = `<div class="col-md-12 main-panel" style="margin-bottom:20px">
+			for(var r in pro){
+				var z = `<div class="col-md-12 main-panel" style="margin-bottom:20px">
 					<h4>${pro[r].pname}<small> -${pro[r].nickname}(${pro[r].uname})<em style="color:green">[${status[pro[r].pstate]}]</em></small></h4>
 					<div class="btn-group t" role="group">
 					<a type="button" class="btn btn-default p_xg" href="/admin/post_admin.shtml?pid-${pro[r].pid}">修改详情</a>
@@ -39,7 +39,7 @@ $(function () {
 	}
 	function adde(){
 		$('.p_wc').unbind('click').bind('click',function(){
-			let pid = $(this).attr('pid');
+			var pid = $(this).attr('pid');
 			if(confirm('确认完成？')){
 				$.post(host+'Home/Product/changeProduct',{pid:pid,pstate:5},function(d){
 					if(d.status)location.reload();
@@ -49,7 +49,7 @@ $(function () {
 		});
 
 		if(userinfo.utype>3)$('.p_sc').unbind('click').bind('click',function(){
-			let pid = $(this).attr('pid');
+			var pid = $(this).attr('pid');
 			if(confirm('确认删除？')){
 				$.post(host+'Home/Product/changeProduct',{pid:pid,pstate:98},function(d){
 					if(d.status)location.reload();
@@ -58,7 +58,7 @@ $(function () {
 			}
 		})
 	}
-	let ee = function(){
+	var ee = function(){
 		if(llt)if($(document).height()-$(document).scrollTop()-$(window).height()<200)get(++page);
 	}
 	$(window).bind('scroll',ee);
