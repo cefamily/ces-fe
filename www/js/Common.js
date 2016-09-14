@@ -22,7 +22,7 @@ Number.prototype.dateChange=function(){
     //window.host="http://233hd.com/ces/";
     window.host="http://40.83.125.235:2333/index.php/";
     
-    let z = location.search.split('-');
+    var z = location.search.split('-');
     window.ProState ={
 		'-1':'审核未通过',
 		'0':'审核中',
@@ -34,15 +34,15 @@ Number.prototype.dateChange=function(){
 	};
     window.GET = {};
     window.getCookie = name=>{
-        let arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
         if(arr=document.cookie.match(reg))
         return unescape(arr[2]);
         else return null;
     };
     if(z.length>1){
         z[0] = z[0].slice(1);
-        let g = window.GET;
-        for(let d in z){
+        var g = window.GET;
+        for(var d in z){
             if(d%2)continue;
             if(z[d]){
                 if(typeof z[parseInt(d)+1] =='undefined')z[parseInt(d)+1] = '';
@@ -66,7 +66,7 @@ Number.prototype.dateChange=function(){
     eval('window.userinfo = '+localStorage.userinfo);
     $(()=>{
         $('.logout').click(s=>$.post(window.host+'Home/User/userLogout',d=>{
-            let exp = new Date();
+            var exp = new Date();
             exp.setTime(exp.getTime() - 1000);
             document.cookie= "userinfo=0;Path=/;expires="+exp.toGMTString();
             delete localStorage.login;location.reload(true);

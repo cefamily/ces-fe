@@ -1,11 +1,11 @@
 $(function () {
 	$("#navlist>li").removeClass('active');
 	$("#navlist>li").eq(0).addClass('active');
-	let pnum = 0;
+	var pnum = 0;
 	function flushinfo(dat,m,box){
 		//console.log(index);
-		let data = dat[pnum++];
-		let month=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],d= new Date(parseInt(data.pctime*1000)),status={
+		var data = dat[pnum++];
+		var month=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],d= new Date(parseInt(data.pctime*1000)),status={
 			'-1':"<span class=\"label label-danger\">审核中</span>",
 			'0':"<span class=\"label label-danger\">审核中</span>",
 			'1':"<span class=\"label label-danger\">征集中</span>",
@@ -89,14 +89,14 @@ $(function () {
 
 	}
 
-	let box = [0,0,0],imgss=[],ki,page=1,llt=0;
+	var box = [0,0,0],imgss=[],ki,page=1,llt=0;
 	$('#col1,#col2,#col3').empty();
 	if($('#col2').css('display')=='none')box=[0];
 	else if($('#col3').css('display')=='none')box=[0,0];
 	
-	let ou = function(p){
+	var ou = function(p){
 		llt = 0;
-		let imgs = [];
+		var imgs = [];
 		$.ajax({
 			url:window.host+"Home/Product/getProductList",
 			type:"POST",
@@ -116,10 +116,10 @@ $(function () {
 					$(window).unbind('scroll',ee);
 					console.error('NOT LOADED STRAIGHT.JS');return;
 				}
-				let p = data.info.products;
+				var p = data.info.products;
 				if(!p.length)$(window).unbind('scroll',ee);
 				pnum = 0;
-				for(let d in p){
+				for(var d in p){
 					imgs.push(
 						{
 							src:p[d].pimg,
@@ -149,7 +149,7 @@ $(function () {
 	}
 	ou(page);
 	$(window).unbind('resize').bind('resize',function(){
-		let box2 = [0,0,0];
+		var box2 = [0,0,0];
 		if($('#col2').css('display')=='none')box2=[0];
 		else if($('#col3').css('display')=='none')box2=[0,0];
 		if(box2.length!=box.length){
@@ -159,7 +159,7 @@ $(function () {
 			loadPic(imgss);
 		}
 	});
-	let ee = function(){
+	var ee = function(){
 		if(llt)if((document.documentElement.offsetHeight || $('body').height())-(document.documentElement.scrollTop || $('body').scrollTop())-$(window).height()<$('.thumbnail img.img-panel').eq(imgss.length-1).height()+200)ou(++page);
 		
 	}

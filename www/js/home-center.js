@@ -13,9 +13,9 @@ $(function() {
     }).click();
 
     $("#changeEmail").click(function(event) {
-        let email = $("#email").val().trim();
-        let nickname = $("#nickname").val().trim();
-        let captcha = $("#e-captcha").val().trim();
+        var email = $("#email").val().trim();
+        var nickname = $("#nickname").val().trim();
+        var captcha = $("#e-captcha").val().trim();
         if (email == "" || nickname == "" || captcha == "") {
             alert("请填写完整");
             return null;
@@ -51,10 +51,10 @@ $(function() {
     });
 
     $("#changePass").click(function(event) {
-    	let old=$("#old").val().trim();
-    	let new1=$("#new1").val().trim();
-    	let new2=$("#new2").val().trim();
-    	let captcha=$("#p-captcha").val().trim();
+    	var old=$("#old").val().trim();
+    	var new1=$("#new1").val().trim();
+    	var new2=$("#new2").val().trim();
+    	var captcha=$("#p-captcha").val().trim();
 
     	if(old=="" || new1=="" || new2==""|| captcha==""){
     		alert("请填写完整");
@@ -64,8 +64,8 @@ $(function() {
     	if(new1!=new2){
     		alert("两次密码输入不一致");
     	}
-    	let pass =CryptoJS.MD5(new1).toString();
-    	let oldpass=CryptoJS.MD5(old).toString();
+    	var pass =CryptoJS.MD5(new1).toString();
+    	var oldpass=CryptoJS.MD5(old).toString();
     	$.ajax({
     		url: window.host+'Home/User/changePassword',
     		type: 'POST',
@@ -97,7 +97,7 @@ function getUserInfo() {
         success: function(data) {
             console.log(data);
             if (data.status == 1) {
-                let info = data.info;
+                var info = data.info;
                 $("#email").val(info[0].uemail);
                 $("#nickname").val(info[0].nickname);
             } else {

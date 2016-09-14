@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // -------------初始化--------
-    let pid = window.GET.id;
+    var pid = window.GET.id;
 
     $.ajax({
         url: window.host + 'Home/Product/getProductByPid',
@@ -11,7 +11,7 @@ $(document).ready(function() {
             console.log(data);
             if (data.status == 1) {
 
-                let month = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                var month = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
                     d = new Date(parseInt(data.info.pctime)*1000),
                     status = [
                         "审核中",
@@ -29,7 +29,7 @@ $(document).ready(function() {
                         "公开",
                         "限制组"
                     ];
-                let info = data.info
+                var info = data.info
                 $(".dl-horizontal").html(`
                     <dt>当前状态:</dt>
                     <dd>${status[info.pstate]}</dd>
@@ -66,9 +66,9 @@ $(document).ready(function() {
         success:function(data){
             console.log(data);
             $('#typro').empty();
-            let info=data.info;
-            for(let i=0;i<info.length;i++){
-                let d= new Date(parseInt(info[i].gctime)*1000);
+            var info=data.info;
+            for(var i=0;i<info.length;i++){
+                var d= new Date(parseInt(info[i].gctime)*1000);
                 console.log(info[i].gctime);
                $('#'+info[i].gtype+'pro').append(`
                  <blockquote class="blockqute-danger">
@@ -86,9 +86,9 @@ $(document).ready(function() {
 
     $('#claim').click(function(event) {
 
-        let arr = {};
+        var arr = {};
         $('#chek input:checked').each(function(index, el) {
-            let value = $(this).val();
+            var value = $(this).val();
             $.ajax({
                 url: window.host + '/Home/Claim/claimProduct',
                 type: 'POST',
