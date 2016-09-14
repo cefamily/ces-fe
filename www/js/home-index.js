@@ -1,8 +1,10 @@
 $(function () {
 	$("#navlist>li").removeClass('active');
 	$("#navlist>li").eq(0).addClass('active');
-	function flushinfo(data,m,box){
+	let pnum = 0;
+	function flushinfo(dat,m,box){
 		//console.log(index);
+		let data = dat[pnum++];
 		let month=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],d= new Date(parseInt(data.pctime*1000)),status={
 			'-1':"<span class=\"label label-danger\">审核中</span>",
 			'0':"<span class=\"label label-danger\">审核中</span>",
@@ -116,12 +118,13 @@ $(function () {
 				}
 				let p = data.info.products;
 				if(!p.length)$(window).unbind('scroll',ee);
+				pnum = 0;
 				for(let d in p){
 					imgs.push(
 						{
 							src:p[d].pimg,
 							callback:function(m,k){
-								ki=k;flushinfo(p[d],$(m),box)
+								ki=k;flushinfo(p,$(m),box)
 							}
 						}
 					);
@@ -129,7 +132,7 @@ $(function () {
 						{
 							src:p[d].pimg,
 							callback:function(m,k){
-								ki=k;flushinfo(p[d],$(m),box)
+								ki=k;flushinfo(p,$(m),box)
 							}
 						}
 					)

@@ -3,14 +3,14 @@ $(function() {
     // -----初始化--------
     $("#navlist>li").removeClass('active');
     $("#navlist>li").eq(5).addClass('active');
-    $(".img-captcha").attr("src", window.host + "Home/Tool/captcha");
     getUserInfo();
 
     // ----------事件处理----------
 
-    $(".img-captcha").click(function() {
-        $(".img-captcha").attr("src", window.host + "Home/Tool/captcha");
-    });
+
+    $(".img-captcha").bind('click',function(){
+        $(".img-captcha").attr("src",window.host+"Home/Tool/captcha"+'?'+Math.random());
+    }).click();
 
     $("#changeEmail").click(function(event) {
         let email = $("#email").val().trim();

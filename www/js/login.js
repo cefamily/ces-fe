@@ -3,7 +3,7 @@ $(document).ready(function(){
   //初始化
   
   
-  $(".img-captcha").attr("src",window.host+"Home/Tool/captcha");
+
 
   //-----------页面切换--------------
   $('#go-reg-btn').click(function(){
@@ -18,9 +18,9 @@ $(document).ready(function(){
 
   //---------事件处理------------
 
-  $(".img-captcha").click(function(){
-    $(".img-captcha").attr("src",window.host+"Home/Tool/captcha");
-  });
+  $(".img-captcha").bind('click',function(){
+    $(".img-captcha").attr("src",window.host+"Home/Tool/captcha"+'?'+Math.random());
+  }).click();
 
   $("#reg-btn").click(function(){
     var pwd1=$("#r-password").val().trim();
