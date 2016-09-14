@@ -1,6 +1,6 @@
 $(function() {
     // -------------初始化--------
-    var pid = window.GET.id;
+    let pid = window.GET.id;
 
     $.ajax({
         url: window.host + 'Home/Product/getProductByPid',
@@ -11,7 +11,7 @@ $(function() {
             console.log(data);
             if (data.status == 1) {
 
-                var month = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                let month = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
                     d = new Date(data.pctime),
                     status = [
                         "征集中",
@@ -27,7 +27,7 @@ $(function() {
                         "公开",
                         "限制组"
                     ];
-                var info = data.info
+                let info = data.info
                 $(".dl-horizontal").html(`
 					<dt>当前状态:</dt>
                     <dd>${status[info.pstate]}</dd>
@@ -54,9 +54,9 @@ $(function() {
     });
 
     $("#sub").click(function(event) {
-    	var type=$("input[name='type']:checked").val();
-    	var gtext=$("#gtext").val();
-    	var flag;
+    	let type=$("input[name='type']:checked").val();
+    	let gtext=$("#gtext").val();
+    	let flag;
 
     	if($("#finsh").prop("checked")){
     		flag=true;

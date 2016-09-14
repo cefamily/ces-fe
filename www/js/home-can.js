@@ -3,7 +3,7 @@ $(function () {
 	$("#navlist>li").eq(1).addClass('active');
 	function flushinfo(data,m,box){
 		//console.log(index);
-		var month=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],d= new Date(parseInt(data.pctime*1000)),status={
+		let month=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],d= new Date(parseInt(data.pctime*1000)),status={
 			'-1':"<span class=\"label label-danger\">审核中</span>",
 			'0':"<span class=\"label label-danger\">审核中</span>",
 			'1':"<span class=\"label label-danger\">征集中</span>",
@@ -87,14 +87,14 @@ $(function () {
 
 	}
 
-	var box = [0,0,0],imgss=[],ki,page=1,llt=0;
+	let box = [0,0,0],imgss=[],ki,page=1,llt=0;
 	$('#col1,#col2,#col3').empty();
 	if($('#col2').css('display')=='none')box=[0];
 	else if($('#col3').css('display')=='none')box=[0,0];
 	
-	var ou = function(p){
+	let ou = function(p){
 		llt = 0;
-		var imgs = [];
+		let imgs = [];
 		$.ajax({
 			url:window.host+"Home/Product/getMyCanClaimProduct",
 			type:"POST",
@@ -114,9 +114,9 @@ $(function () {
 					$(window).unbind('scroll',ee);
 					console.error('NOT LOADED STRAIGHT.JS');return;
 				}
-				var p = data.info.products;
+				let p = data.info.products;
 				if(!p.length)$(window).unbind('scroll',ee);
-				for(var d in p){
+				for(let d in p){
 					imgs.push(
 						{
 							src:p[d].pimg,
@@ -146,7 +146,7 @@ $(function () {
 	}
 	ou(page);
 	$(window).unbind('resize').bind('resize',function(){
-		var box2 = [0,0,0];
+		let box2 = [0,0,0];
 		if($('#col2').css('display')=='none')box2=[0];
 		else if($('#col3').css('display')=='none')box2=[0,0];
 		if(box2.length!=box.length){
@@ -156,7 +156,7 @@ $(function () {
 			loadPic(imgss);
 		}
 	});
-	var ee = function(){
+	let ee = function(){
 		if(llt)if((document.documentElement.offsetHeight || $('body').height())-(document.documentElement.scrollTop || $('body').scrollTop())-$(window).height()<$('.thumbnail img.img-panel').eq(imgss.length-1).height()+200)ou(++page);
 		
 	}

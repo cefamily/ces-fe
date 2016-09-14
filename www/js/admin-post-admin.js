@@ -5,7 +5,7 @@ $(function () {
 			alert(d.info);
 			return
 		}
-		for(var z in d.info){
+		for(let z in d.info){
 			$('[name='+z+']').val(d.info[z]).focus();
 		}
 		$('.cs-options [data-value='+d.info.pstate+']').click().click();
@@ -13,7 +13,7 @@ $(function () {
 
 	},'json')
 	$('#push-btn').bind('click',function(){
-		var s = $('form').serialize();
+		let s = $('form').serialize();
 		$.post(host+'Home/Product/changeProduct',s,function(d){
 			if(!d.status){
 				alert('修改失败');return

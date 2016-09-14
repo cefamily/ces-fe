@@ -1,6 +1,6 @@
 $(function () {
 	$("#navlist>li").eq(10).addClass('active');
-	var page = 1,llt=1,
+	let page = 1,llt=1,
 	status ={
 		'-1':'审核未通过',
 		'0':'审核中',
@@ -18,24 +18,24 @@ $(function () {
 	};
 	function get(page,clean){
 		llt=0;
-		var data = {page:page};
+		let data = {page:page};
 		$.post(host+'Home/Team/getTeamList',data,function(d){
 			
 			if(!d.status)return;
 			if(userinfo.utype>3 && clean){
 				$('.tt-list').empty();
-				var z = `<div class="col-md-12 main-panel" style="margin-bottom:20px">
+				let z = `<div class="col-md-12 main-panel" style="margin-bottom:20px">
 					<div class="btn-group t" role="group">`;
 					z+=`<a type="button" class="btn btn-default p_tz">添加组</a>`;
 					z+=`</div>
 					</div>`;
 				$(z).appendTo('.tt-list');
 			}
-			var pro = d.info.teams;
+			let pro = d.info.teams;
 			if(!pro.length)return;
 			if(userinfo.utype<4 && clean)$('.tt-list').empty();
-			for(var r in pro){
-				var z = `<div class="col-md-12 main-panel" style="margin-bottom:20px">
+			for(let r in pro){
+				let z = `<div class="col-md-12 main-panel" style="margin-bottom:20px">
 					<h4>${pro[r].tid}:${pro[r].tname}</h4>
 					<div class="btn-group t" role="group">`;
 					z+=`<a type="button" class="btn btn-default p_zy" href="/admin/team_user.shtml?tid-${pro[r].tid}">查看组员</a>`;
@@ -53,7 +53,7 @@ $(function () {
 	}
 	function adde(){
 		$('.p_tz').unbind('click').bind('click',function(){
-			var z= prompt('设定名字为：');
+			let z= prompt('设定名字为：');
 			if(z){
 				$.post(host+'Home/Team/addTeam',{tname:z},function(d){
 					if(d.status)location.reload();
@@ -62,8 +62,8 @@ $(function () {
 			}
 		});
 		$('.p_de').unbind('click').bind('click',function(){
-			var tid = $(this).attr('tid');
-			var z= confirm('确认删除小组？');
+			let tid = $(this).attr('tid');
+			let z= confirm('确认删除小组？');
 			if(z){
 				$.post(host+'Home/Team/deleteTeam',{tid:tid},function(d){
 					if(d.status)location.reload();
@@ -72,8 +72,8 @@ $(function () {
 			}
 		});
 		$('.p_mz').unbind('click').bind('click',function(){
-			var tid = $(this).attr('tid');
-			var z= prompt('修改名字为：');
+			let tid = $(this).attr('tid');
+			let z= prompt('修改名字为：');
 			if(z){
 				$.post(host+'Home/Team/changeTeamName',{tid:tid,tname:z},function(d){
 					if(d.status)location.reload();
@@ -83,8 +83,8 @@ $(function () {
 		});
 
 		$('.p_tj').unbind('click').bind('click',function(){
-			var tid = $(this).attr('tid');
-			var z= prompt('添加用户ID：');
+			let tid = $(this).attr('tid');
+			let z= prompt('添加用户ID：');
 			if(z){
 				$.post(host+'Home/Team/addMember',{tid:tid,type:'uid',value:z},function(d){
 					if(d.status)location.reload();
@@ -93,7 +93,7 @@ $(function () {
 			}
 		});
 	}
-	var ee = function(){
+	let ee = function(){
 		if(llt)if($(document).height()-$(document).scrollTop()-$(window).height()<200)get(++page);
 	}
 	$(window).bind('scroll',ee);
